@@ -1,0 +1,1033 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal especializado en gestión de la información, ecosistemas Cloud e infraestructura tecnológica empresarial.">
+    <title>Unidad I | Fundamentos cloud e infraestructura</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <a class="skip-link" href="index.html#contenido">Saltar al contenido</a>
+
+    <!-- ══════════════════════ HEADER ══════════════════════ -->
+    <header class="site-header">
+
+        <!-- TOP STRIP -->
+        <div class="topstrip">
+            <div class="topstrip-inner">
+                <div class="topstrip-left">
+                    <span class="mono-chip"><i class="bi bi-circle-fill pulse-dot"></i> Sistema activo</span>
+                    <span class="sep">·</span>
+                    <span class="mono-text">Arquitectura Cloud · Infraestructura TI · Sistemas de Información</span>
+                </div>
+                <div class="topstrip-right">
+                    <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="strip-link">NIST <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://owasp.org/" target="_blank" rel="noopener" class="strip-link">OWASP <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="strip-link">CNCF <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN NAVBAR -->
+        <nav class="navbar" id="navbar" aria-label="Navegación principal">
+            <div class="nav-inner">
+                <!-- Brand -->
+                <a class="brand" href="index.html#contenido" aria-label="Inicio">
+                    <div class="brand-icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="13" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="1" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M13 17H21M17 13V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">TI Empresarial</span>
+                        <span class="brand-sub">Fundamentos técnicos</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <ul class="nav-links" role="list">
+    <li><a href="index.html" class="nav-link"><span class="link-num">00</span><span>Inicio</span></a></li>
+    <li><a href="unidad1.html" class="nav-link"><span class="link-num">I</span><span>Unidad I</span></a></li>
+    <li><a href="unidad2.html" class="nav-link"><span class="link-num">II</span><span>Unidad II</span></a></li>
+</ul>
+
+                <!-- Right actions -->
+                <div class="nav-actions">
+                    <a href="unidad1.html#semana-03" class="nav-cta">
+                        <i class="bi bi-check2-square"></i>
+                        <span>Checklist</span>
+                    </a>
+                    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Nav Progress Line -->
+            <div class="nav-progress" id="navProgress"></div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <div class="mobile-menu-inner">
+    <nav>
+        <a href="index.html" class="mob-link"><span class="mob-num">00</span><span class="mob-label">Inicio</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad1.html" class="mob-link"><span class="mob-num">I</span><span class="mob-label">Unidad I</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad2.html" class="mob-link"><span class="mob-num">II</span><span class="mob-label">Unidad II</span><i class="bi bi-arrow-right"></i></a>
+    </nav>
+                <div class="mob-footer">
+                    <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="mob-ref">NIST</a>
+                    <a href="https://owasp.org/" target="_blank" rel="noopener" class="mob-ref">OWASP</a>
+                    <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="mob-ref">CNCF</a>
+                    <a href="https://www.iso.org/" target="_blank" rel="noopener" class="mob-ref">ISO 27001</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════ HERO ══════ -->
+        <section class="hero" aria-label="Portada">
+            <div class="hero-bg">
+                <div class="hero-orb orb-1"></div>
+                <div class="hero-orb orb-2"></div>
+                <div class="hero-orb orb-3"></div>
+                <div class="hero-grid"></div>
+            </div>
+
+            <div class="hero-inner">
+                <!-- Left column -->
+                <div class="hero-content" data-aos="fade-up" data-aos-duration="700">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-badge"><i class="bi bi-lightning-charge-fill"></i> Arquitectura moderna</span>
+                        <span class="eyebrow-badge"><i class="bi bi-shield-check-fill"></i> Seguridad aplicada</span>
+                        <span class="eyebrow-badge d-none d-md-inline-flex"><i class="bi bi-activity"></i> FinOps</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="title-line">Sistemas,</span>
+                        <span class="title-line accent">Cloud</span>
+                        <span class="title-line">e Infraestructura</span>
+                    </h1>
+
+                    <p class="hero-desc">Un recorrido técnico por conceptos esenciales, modelos de despliegue, administración y buenas prácticas para entornos empresariales modernos.</p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-n">4</span>
+                            <span class="stat-l">Módulos</span>
+                        </div>
+                        <div class="stat-div"></div>
+                        <div class="stat-item">
+                            <span class="stat-n">IaaS</span>
+                            <span class="stat-l">PaaS · SaaS</span>
+                        </div>
+                        <div class="stat-div"></div>
+                        <div class="stat-item">
+                            <span class="stat-n">Zero</span>
+                            <span class="stat-l">Trust Ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Module Map -->
+                <div class="hero-map" data-aos="fade-left" data-aos-duration="700" data-aos-delay="120">
+                    <div class="map-card">
+                        <div class="map-header">
+                            <div class="map-header-left">
+                                <i class="bi bi-terminal-fill"></i>
+                                <span>Mapa de contenido</span>
+                            </div>
+                            <span class="map-badge">Unidad I</span>
+                        </div>
+
+                        <div class="map-modules">
+                            <a href="unidad1.html" class="map-module">
+                                <div class="mod-icon mod-blue"><i class="bi bi-database-fill"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad I</span>
+                                    <span class="mod-tags">Semanas 01–04 · Cloud &amp; Infra</span>
+                                </div>
+                                <span class="mod-num">I</span>
+                            </a>
+                            <a href="unidad2.html" class="map-module">
+                                <div class="mod-icon mod-cyan"><i class="bi bi-cloud-fill"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad II</span>
+                                    <span class="mod-tags">Semana 05 · BI &amp; Datos</span>
+                                </div>
+                                <span class="mod-num">II</span>
+                            </a>
+                            <a href="index.html#unidad-iii" class="map-module">
+                                <div class="mod-icon mod-violet"><i class="bi bi-hourglass-split"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad III</span>
+                                    <span class="mod-tags">Próximamente</span>
+                                </div>
+                                <span class="mod-num">III</span>
+                            </a>
+                            <a href="index.html#unidad-iv" class="map-module">
+                                <div class="mod-icon mod-green"><i class="bi bi-hourglass-split"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad IV</span>
+                                    <span class="mod-tags">Próximamente</span>
+                                </div>
+                                <span class="mod-num">IV</span>
+                            </a>
+                        </div>
+
+                        <div class="map-footer">
+                            <i class="bi bi-mouse2"></i> Scroll para explorar o usa el menú
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll hint -->
+            <div class="scroll-hint" aria-hidden="true">
+                <span>scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+    </header>
+
+    <!-- ══════════════════════ MAIN ══════════════════════ -->
+    <main id="contenido"><section id="unidad-i" class="unit">
+            <div class="unit-header" data-aos="fade-up">
+                <div class="unit-label">
+                    <span class="unit-num">UNIDAD I</span>
+                    <span class="unit-pill">Administración en la Nube</span>
+                </div>
+                <p class="unit-desc">Esta unidad reúne los fundamentos que una organización necesita para operar entornos cloud de forma segura y eficiente: sistemas de información, cloud computing, administración (IAM, IaC, observabilidad, FinOps) e infraestructura como base de disponibilidad y continuidad.</p>
+                <div class="unit-weeks">
+                    <a class="week-chip" href="#semana-01"><span>Semana 01</span><small>Sistemas de información</small></a>
+                    <a class="week-chip" href="#semana-02"><span>Semana 02</span><small>Cloud computing</small></a>
+                    <a class="week-chip" href="#semana-03"><span>Semana 03</span><small>Administración cloud</small></a>
+                    <a class="week-chip" href="#semana-04"><span>Semana 04</span><small>Infraestructura TI</small></a>
+                </div>
+            </div>
+
+            <!-- ───── Semana 01 ───── -->
+            <article id="semana-01" class="module">
+            <div class="module-inner">
+
+                <div class="module-header" data-aos="fade-up">
+                    <div class="module-label">
+                        <span class="label-num">Semana 01</span>
+                        <span class="label-line"></span>
+                        <span class="label-cat">Sistemas de información</span>
+                    </div>
+                    <h2 class="module-title">Sistemas de Información Empresarial</h2>
+                    <p class="module-intro">La base tecnológica que transforma datos crudos en decisiones estratégicas. Desde el TPS operativo hasta el ESS ejecutivo, cada capa tiene su propósito.</p>
+                </div>
+
+                <!-- Callout -->
+                <div class="callout callout-blue" data-aos="fade-up" data-aos-delay="50">
+                    <div class="callout-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                    <div class="callout-body">
+                        <h3 class="callout-title">Resumen ejecutivo</h3>
+                        <div class="callout-grid">
+                            <div class="callout-item">
+                                <strong>Objetivo</strong>
+                                <span>Transformar datos en decisiones mediante procesos, tecnología y personas.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>Valor</strong>
+                                <span>Eficiencia operativa, control, trazabilidad y ventaja competitiva.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>Riesgos</strong>
+                                <span>Silos de datos, mala calidad de datos y seguridad insuficiente.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-prose" data-aos="fade-up">
+                    <h3>La información en la empresa</h3>
+                    <p>En el entorno corporativo actual existe una jerarquía fundamental: <strong>Datos → Información → Conocimiento</strong>. Los datos son hechos crudos sin contexto (un número de venta). La <strong>información</strong> surge cuando esos datos se procesan, estructuran y categorizan dándoles significado útil (ventas totales del mes vs. año anterior). Finalmente, el conocimiento es la aplicación práctica de esa información para tomar decisiones.</p>
+                    <p>La información es el activo intangible más valioso de una empresa. Una correcta gestión permite anticipar tendencias, optimizar la cadena de suministro, fidelizar clientes y lograr una ventaja competitiva sostenible.</p>
+                </div>
+
+                <!-- Tipos de SI - Visual Cards -->
+                <div class="section-block" data-aos="fade-up">
+                    <h3>Tipos de sistemas de información</h3>
+                    <p>Las organizaciones utilizan distintos sistemas según el nivel jerárquico que los opere:</p>
+                    <div class="type-grid">
+                        <div class="type-card">
+                            <div class="tc-header">
+                                <div class="tc-icon bg-blue"><i class="bi bi-cpu"></i></div>
+                                <span class="tc-tag">Nivel operativo</span>
+                            </div>
+                            <h4>TPS</h4>
+                            <p class="tc-full">Sistemas de Procesamiento de Transacciones</p>
+                            <p class="tc-desc">Registran actividades diarias y rutinarias con alta confiabilidad: nómina, escaneo de productos, reservas de vuelos.</p>
+                        </div>
+                        <div class="type-card">
+                            <div class="tc-header">
+                                <div class="tc-icon bg-violet"><i class="bi bi-bar-chart-fill"></i></div>
+                                <span class="tc-tag">Nivel administrativo</span>
+                            </div>
+                            <h4>MIS</h4>
+                            <p class="tc-full">Sistemas de Información Gerencial</p>
+                            <p class="tc-desc">Resumen datos de los TPS en reportes estandarizados para que los gerentes supervisen el rendimiento actual y predicen el futuro.</p>
+                        </div>
+                        <div class="type-card">
+                            <div class="tc-header">
+                                <div class="tc-icon bg-cyan"><i class="bi bi-graph-up-arrow"></i></div>
+                                <span class="tc-tag">Análisis</span>
+                            </div>
+                            <h4>DSS</h4>
+                            <p class="tc-full">Sistemas de Soporte a la Decisión</p>
+                            <p class="tc-desc">Ayudan a gerentes en decisiones semiestructuradas y cambiantes usando modelos analíticos avanzados y escenarios hipotéticos.</p>
+                        </div>
+                        <div class="type-card">
+                            <div class="tc-header">
+                                <div class="tc-icon bg-gold"><i class="bi bi-speedometer2"></i></div>
+                                <span class="tc-tag">Alta dirección</span>
+                            </div>
+                            <h4>EIS / ESS</h4>
+                            <p class="tc-full">Sistemas de Información Ejecutiva</p>
+                            <p class="tc-desc">Filtran y presentan KPIs críticos en dashboards intuitivos para la planeación estratégica a largo plazo de la alta dirección.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Componentes -->
+                <div class="section-block" data-aos="fade-up">
+                    <h3>5 pilares de todo sistema de información</h3>
+                    <div class="pillar-list">
+                        <div class="pillar-item">
+                            <span class="pillar-n">01</span>
+                            <div class="pillar-body">
+                                <strong>Hardware</strong>
+                                <p>Infraestructura física tangible: servidores corporativos, computadoras, dispositivos móviles y periféricos de entrada/salida.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <span class="pillar-n">02</span>
+                            <div class="pillar-body">
+                                <strong>Software</strong>
+                                <p>Programas que dictan instrucciones al hardware: software de sistema (Windows Server, Linux) y de aplicación (CRM, facturación).</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <span class="pillar-n">03</span>
+                            <div class="pillar-body">
+                                <strong>Datos (Base de Datos)</strong>
+                                <p>Repositorio donde se almacena la materia prima estructurada, gestionada por un SGBD como SQL Server, Oracle o MySQL.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <span class="pillar-n">04</span>
+                            <div class="pillar-body">
+                                <strong>Redes y Telecomunicaciones</strong>
+                                <p>Routers, switches, fibra óptica e Internet. Conecta los sistemas desde Intranets locales hasta la red global.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <span class="pillar-n">05</span>
+                            <div class="pillar-body">
+                                <strong>Personas y Procedimientos</strong>
+                                <p>Usuarios, desarrolladores, analistas y las políticas que rigen cómo se introduce y procesa la información.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video -->
+                <div class="video-block" data-aos="fade-up">
+                    <div class="video-label"><i class="bi bi-play-circle-fill"></i> Recurso visual</div>
+                    <div class="video-wrap">
+                        <iframe src="https://www.youtube.com/embed/IynVhbekGF4" title="¿Qué es un Sistema de Información?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="video-caption">Fundamentos e importancia de los Sistemas de Información empresarial.</p>
+                </div>
+
+                <!-- Buenas prácticas -->
+                <div class="callout callout-dark" data-aos="fade-up">
+                    <div class="callout-icon"><i class="bi bi-shield-check-fill"></i></div>
+                    <div class="callout-body">
+                        <h3 class="callout-title">Buenas prácticas · Calidad y gobierno de datos</h3>
+                        <div class="callout-grid">
+                            <div class="callout-item">
+                                <strong><i class="bi bi-check-circle me-1"></i> Calidad</strong>
+                                <span>Validación, deduplicación y controles de integridad con reglas claras de negocio.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong><i class="bi bi-check-circle me-1"></i> Gobierno</strong>
+                                <span>Data owners, catálogos de datos y definición de métricas (KPIs) consistentes en toda la organización.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong><i class="bi bi-check-circle me-1"></i> Seguridad</strong>
+                                <span>Mínimos privilegios, auditoría, clasificación de información y cifrado según criticidad del dato.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conceptos que suelen faltar -->
+                <div class="section-block" data-aos="fade-up">
+                    <h3>Conceptos esenciales (para que el SI sea confiable)</h3>
+                    <div class="function-list">
+                        <div class="fn-item">
+                            <div class="fn-icon"><i class="bi bi-kanban-fill"></i></div>
+                            <div class="fn-body">
+                                <h4>Procesos + controles</h4>
+                                <p>Un SI no es solo software: necesita procesos definidos (quién crea/valida/modifica datos), controles y auditoría para mantener trazabilidad y cumplimiento.</p>
+                            </div>
+                        </div>
+                        <div class="fn-item">
+                            <div class="fn-icon"><i class="bi bi-diagram-2-fill"></i></div>
+                            <div class="fn-body">
+                                <h4>Integración (ETL/ELT y APIs)</h4>
+                                <p>La información útil suele combinar fuentes. La integración se logra con APIs, colas de eventos y pipelines ETL/ELT hacia un <strong>Data Warehouse</strong> o <strong>Data Lake</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="fn-item">
+                            <div class="fn-icon"><i class="bi bi-shield-lock-fill"></i></div>
+                            <div class="fn-body">
+                                <h4>Seguridad (CIA)</h4>
+                                <p>La base es la triada <strong>Confidencialidad, Integridad y Disponibilidad</strong>: permisos mínimos, registros de auditoría, controles de cambios y planes de continuidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Divider -->
+        <div class="module-divider" aria-hidden="true"><span>Semana 02</span></div>
+
+        <!-- ───── Semana 02 ───── -->
+        <article id="semana-02" class="module">
+            <div class="module-inner">
+
+                <div class="module-header" data-aos="fade-up">
+                    <div class="module-label">
+                        <span class="label-num">Semana 02</span>
+                        <span class="label-line"></span>
+                        <span class="label-cat">Computación en la nube</span>
+                    </div>
+                    <h2 class="module-title">Computación en la Nube</h2>
+                    <p class="module-intro">Del CapEx fijo al OpEx elástico. El modelo que revolucionó cómo las empresas consumen, escalan y pagan por infraestructura tecnológica.</p>
+                </div>
+
+                <div class="content-prose" data-aos="fade-up">
+                    <h3>¿Qué es la Computación en la nube?</h3>
+                    <p>Según el <strong>NIST</strong>, el cloud computing es un modelo que permite acceso ubicuo, conveniente y bajo demanda a través de la red a un conjunto compartido de recursos informáticos configurables. Su mayor ventaja es la <strong>elasticidad</strong>: las empresas escalan recursos en segundos con un modelo de pago por uso, eliminando grandes inversiones iniciales (CapEx) en centros de datos propios.</p>
+                </div>
+
+                <!-- Key concepts -->
+                <div class="callout callout-cyan" data-aos="fade-up">
+                    <div class="callout-icon"><i class="bi bi-cloud-fill"></i></div>
+                    <div class="callout-body">
+                        <h3 class="callout-title">Conceptos clave</h3>
+                        <div class="callout-grid">
+                            <div class="callout-item">
+                                <strong>CapEx vs OpEx</strong>
+                                <span>Inversión inicial fija (local) frente a costos operativos variables bajo demanda (cloud).</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>Alta disponibilidad</strong>
+                                <span>Diseño con redundancia en zonas y regiones. No "un solo servidor grande", sino múltiples nodos tolerantes a fallos.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>Responsabilidad compartida</strong>
+                                <span>El proveedor protege la nube; el cliente protege lo que configura y sus propios datos.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelos de despliegue -->
+                <div class="section-block" data-aos="fade-up">
+                    <h3>Modelos de Despliegue</h3>
+                    <div class="deploy-grid">
+                        <div class="deploy-card">
+                            <div class="dc-stripe stripe-blue"></div>
+                            <div class="dc-body">
+                                <i class="bi bi-globe2 dc-icon"></i>
+                                <h4>Nube Pública</h4>
+                                <p>Infraestructura de un proveedor (AWS, Azure, GCP) compartida con otras organizaciones (multitenant). Recursos bajo demanda, máxima elasticidad.</p>
+                                <div class="dc-tags"><span>AWS</span><span>Azure</span><span>GCP</span></div>
+                            </div>
+                        </div>
+                        <div class="deploy-card">
+                            <div class="dc-stripe stripe-violet"></div>
+                            <div class="dc-body">
+                                <i class="bi bi-building-lock dc-icon"></i>
+                                <h4>Nube Privada</h4>
+                                <p>Recursos exclusivos de una organización, en sus instalaciones o en un proveedor externo, pero en red privada y aislada. Control total.</p>
+                                <div class="dc-tags"><span>VMware</span><span>OpenStack</span></div>
+                            </div>
+                        </div>
+                        <div class="deploy-card">
+                            <div class="dc-stripe stripe-cyan"></div>
+                            <div class="dc-body">
+                                <i class="bi bi-shuffle dc-icon"></i>
+                                <h4>Nube Híbrida</h4>
+                                <p>Convergencia de pública y privada. Datos sensibles en privada (cumplimiento normativo); picos de tráfico en pública. Lo mejor de ambos mundos.</p>
+                                <div class="dc-tags"><span>Azure Arc</span><span>Anthos</span></div>
+                            </div>
+                        </div>
+                        <div class="deploy-card">
+                            <div class="dc-stripe stripe-green"></div>
+                            <div class="dc-body">
+                                <i class="bi bi-diagram-3-fill dc-icon"></i>
+                                <h4>Multicloud</h4>
+                                <p>Múltiples proveedores de nube pública simultáneamente. Evita dependencia de un vendor y usa el mejor servicio de cada plataforma.</p>
+                                <div class="dc-tags"><span>AWS + GCP</span><span>Terraform</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IaaS PaaS SaaS -->
+                <div class="section-block" data-aos="fade-up">
+                    <h3>Modelos de servicio</h3>
+                    <div class="service-stack">
+                        <div class="ss-row">
+                            <div class="ss-label">
+                                <span class="ss-tag">SaaS</span>
+                                <small>Aplicación lista para usar</small>
+                            </div>
+                            <div class="ss-bar" style="--w: 95%">
+                                <div class="ss-fill fill-green"></div>
+                                <span class="ss-example">Gmail, Salesforce, Slack</span>
+                            </div>
+                            <span class="ss-ctrl">Máxima velocidad</span>
+                        </div>
+                        <div class="ss-row">
+                            <div class="ss-label">
+                                <span class="ss-tag">PaaS</span>
+                                <small>Plataforma administrada</small>
+                            </div>
+                            <div class="ss-bar" style="--w: 65%">
+                                <div class="ss-fill fill-cyan"></div>
+                                <span class="ss-example">AWS Elastic Beanstalk, Heroku</span>
+                            </div>
+                            <span class="ss-ctrl">Control medio</span>
+                        </div>
+                        <div class="ss-row">
+                            <div class="ss-label">
+                                <span class="ss-tag">IaaS</span>
+                                <small>Infraestructura base</small>
+                            </div>
+                            <div class="ss-bar" style="--w: 40%">
+                                <div class="ss-fill fill-blue"></div>
+                                <span class="ss-example">EC2, Azure VMs, GCE</span>
+                            </div>
+                            <span class="ss-ctrl">Control total</span>
+                        </div>
+                        <div class="ss-legend">
+                            <div class="ss-l-item"><div class="ss-l-bar"></div><span>← Mayor gestión por el cliente</span></div>
+                            <div class="ss-l-item"><span>Mayor gestión del proveedor →</span><div class="ss-l-bar ss-l-right"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-block" data-aos="fade-up">
+                    <h3>Características esenciales (NIST) y arquitectura</h3>
+                    <div class="pillar-list">
+                        <div class="pillar-item">
+                            <span class="pillar-n">01</span>
+                            <div class="pillar-body">
+                                <strong>Autoservicio bajo demanda</strong>
+                                <p>Provisionar recursos sin intervención humana del proveedor (portales, APIs, IaC).</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <span class="pillar-n">02</span>
+                            <div class="pillar-body">
+                                <strong>Acceso amplio por red</strong>
+                                <p>Acceso desde múltiples dispositivos y ubicaciones mediante estándares de red.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <span class="pillar-n">03</span>
+                            <div class="pillar-body">
+                                <strong>Pool de recursos</strong>
+                                <p>Recursos compartidos, aislados por virtualización (multitenancy) con elasticidad.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <span class="pillar-n">04</span>
+                            <div class="pillar-body">
+                                <strong>Elasticidad rápida</strong>
+                                <p>Escalar en minutos/segundos (auto-scaling) según demanda real.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <span class="pillar-n">05</span>
+                            <div class="pillar-body">
+                                <strong>Servicio medido</strong>
+                                <p>Medición y facturación por uso (CPU, almacenamiento, red, requests), base de FinOps.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-dark" data-aos="fade-up">
+                    <div class="callout-icon"><i class="bi bi-columns-gap"></i></div>
+                    <div class="callout-body">
+                        <h3 class="callout-title">Regiones, Zonas y diseño resiliente</h3>
+                        <div class="callout-grid">
+                            <div class="callout-item">
+                                <strong>Región</strong>
+                                <span>Ubicación geográfica con múltiples zonas. Útil para latencia y cumplimiento.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>Zona (AZ)</strong>
+                                <span>Centro(s) de datos independientes dentro de una región. Base para alta disponibilidad.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>Patrón recomendado</strong>
+                                <span>Distribuir servicios críticos en 2–3 zonas, con balanceo, réplicas y recuperación automatizada.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video -->
+                <div class="video-block" data-aos="fade-up">
+                    <div class="video-label"><i class="bi bi-play-circle-fill"></i> Recurso visual</div>
+                    <div class="video-wrap">
+                        <iframe src="https://www.youtube.com/embed/iMMsPUo0RVE" title="¿Qué es la Computación en la Nube?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="video-caption">Aprende cómo funciona el Cloud Computing y por qué transformó la TI empresarial.</p>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- Divider -->
+        <div class="module-divider" aria-hidden="true"><span>Semana 03</span></div>
+
+        <!-- ───── Semana 03 ───── -->
+        <article id="semana-03" class="module">
+            <div class="module-inner">
+
+                <div class="module-header" data-aos="fade-up">
+                    <div class="module-label">
+                        <span class="label-num">Semana 03</span>
+                        <span class="label-line"></span>
+                        <span class="label-cat">Administración cloud</span>
+                    </div>
+                    <h2 class="module-title">Administración en la Nube</h2>
+                    <p class="module-intro">Más allá del hardware físico: orquestación de software, seguridad de red lógica y control presupuestal (FinOps) para entornos cloud empresariales.</p>
+                </div>
+
+                <!-- Checklist -->
+                <div class="callout callout-violet" data-aos="fade-up">
+                    <div class="callout-icon"><i class="bi bi-check2-all"></i></div>
+                    <div class="callout-body">
+                        <h3 class="callout-title">✓ Checklist mínimo de operación</h3>
+                        <div class="checklist-grid">
+                            <div class="cl-item">
+                                <div class="cl-icon"><i class="bi bi-person-badge-fill"></i></div>
+                                <div>
+                                    <strong>Identidad (IAM)</strong>
+                                    <p>MFA, roles por función, rotación de credenciales y cuentas separadas por entorno (dev/staging/prod).</p>
+                                </div>
+                            </div>
+                            <div class="cl-item">
+                                <div class="cl-icon"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+                                <div>
+                                    <strong>Backups</strong>
+                                    <p>RPO/RTO definidos, pruebas de restauración periódicas, retención adecuada y cifrado de respaldos.</p>
+                                </div>
+                            </div>
+                            <div class="cl-item">
+                                <div class="cl-icon"><i class="bi bi-activity"></i></div>
+                                <div>
+                                    <strong>Observabilidad</strong>
+                                    <p>Métricas + logs + trazas distribuidas, alertas accionables con runbooks listos para ejecutar.</p>
+                                </div>
+                            </div>
+                            <div class="cl-item">
+                                <div class="cl-icon"><i class="bi bi-currency-dollar"></i></div>
+                                <div>
+                                    <strong>Costos (FinOps)</strong>
+                                    <p>Etiquetado (tags), presupuestos y alertas, apagado automático de recursos ociosos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Funciones -->
+                <div class="section-block" data-aos="fade-up">
+                    <h3>Disciplinas clave de la administración cloud</h3>
+                    <div class="function-list">
+                        <div class="fn-item">
+                            <div class="fn-icon"><i class="bi bi-code-slash"></i></div>
+                            <div class="fn-body">
+                                <h4>Aprovisionamiento y Automatización (IaC)</h4>
+                                <p>Despliegue de recursos de forma instantánea y reproducible. Con <strong>Infraestructura como Código</strong> (Terraform, Pulumi, CloudFormation) se provisionan cientos de servidores y redes automáticamente sin errores humanos.</p>
+                            </div>
+                        </div>
+                        <div class="fn-item">
+                            <div class="fn-icon"><i class="bi bi-graph-up"></i></div>
+                            <div class="fn-body">
+                                <h4>Monitoreo y Observabilidad</h4>
+                                <p>Supervisión continua de métricas vitales (CPU, latencia, throughput). Plataformas como <strong>Datadog, Grafana o AWS CloudWatch</strong> alertan de inmediato ante cualquier anomalía o degradación.</p>
+                            </div>
+                        </div>
+                        <div class="fn-item">
+                            <div class="fn-icon"><i class="bi bi-shield-lock-fill"></i></div>
+                            <div class="fn-body">
+                                <h4>Gestión de Seguridad e Identidad</h4>
+                                <p>Definición precisa de qué usuario o sistema puede acceder a qué recurso. Firewalls virtuales, cifrado en reposo y tránsito, y políticas de <strong>Zero Trust</strong>: nunca confiar, siempre verificar.</p>
+                            </div>
+                        </div>
+                        <div class="fn-item">
+                            <div class="fn-icon"><i class="bi bi-wallet2"></i></div>
+                            <div class="fn-body">
+                                <h4>Gestión de Costos y Optimización</h4>
+                                <p>Analizar la factura cloud para identificar capacidades ociosas, apagar servidores en horarios no laborables y redimensionar instancias que consumen más recursos de los necesarios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-block" data-aos="fade-up">
+                    <h3>Base operativa: Landing Zone (fundación del entorno)</h3>
+                    <div class="type-grid">
+                        <div class="type-card">
+                            <div class="tc-header">
+                                <div class="tc-icon bg-cyan"><i class="bi bi-diagram-3-fill"></i></div>
+                                <span class="tc-tag">Estructura</span>
+                            </div>
+                            <h4>Cuentas y entornos</h4>
+                            <p class="tc-desc">Separación por <strong>dev/staging/prod</strong> (y por equipos) para aislar riesgos y costos. Control por roles y políticas.</p>
+                        </div>
+                        <div class="type-card">
+                            <div class="tc-header">
+                                <div class="tc-icon bg-violet"><i class="bi bi-shield-lock-fill"></i></div>
+                                <span class="tc-tag">Seguridad</span>
+                            </div>
+                            <h4>Guardrails</h4>
+                            <p class="tc-desc">Políticas base: MFA, logging centralizado, cifrado por defecto, redes privadas y bloqueo de configuraciones peligrosas.</p>
+                        </div>
+                        <div class="type-card">
+                            <div class="tc-header">
+                                <div class="tc-icon bg-gold"><i class="bi bi-clipboard2-check-fill"></i></div>
+                                <span class="tc-tag">Operación</span>
+                            </div>
+                            <h4>Estándares</h4>
+                            <p class="tc-desc">Nombres, etiquetas (tags), presupuestos, alertas, backups y plantillas IaC para despliegues consistentes.</p>
+                        </div>
+                        <div class="type-card">
+                            <div class="tc-header">
+                                <div class="tc-icon bg-blue"><i class="bi bi-git"></i></div>
+                                <span class="tc-tag">Entrega</span>
+                            </div>
+                            <h4>CI/CD</h4>
+                            <p class="tc-desc">Pipelines con pruebas, seguridad (SAST/DAST), despliegues progresivos (canary/blue-green) y rollback.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tecnologías -->
+                <div class="section-block" data-aos="fade-up">
+                    <h3>Tecnologías de abstracción cloud</h3>
+                    <div class="tech-row">
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="bi bi-layers-fill"></i></div>
+                            <h4>Virtualización</h4>
+                            <p>El hipervisor separa entornos físicos de virtuales, permitiendo que un servidor físico se divida en múltiples VMs con su propio OS.</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="bi bi-box-seam-fill"></i></div>
+                            <h4>Contenedores</h4>
+                            <p>Docker y similares virtualizan el sistema operativo, no el hardware. Empaquetan código + dependencias para ejecutarse igual en cualquier entorno.</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                            <h4>Orquestación</h4>
+                            <p><strong>Kubernetes</strong>: el director de orquesta de miles de contenedores. Decide dónde ejecutarlos, escala su número y los reinicia si fallan.</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="bi bi-lightning-fill"></i></div>
+                            <h4>Serverless</h4>
+                            <p>El desarrollador solo escribe código; el proveedor gestiona la infraestructura. Se paga únicamente por los milisegundos de ejecución real.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zero Trust -->
+                <div class="callout callout-dark" data-aos="fade-up">
+                    <div class="callout-icon"><i class="bi bi-lock-fill"></i></div>
+                    <div class="callout-body">
+                        <h3 class="callout-title">Seguridad Zero Trust en la práctica</h3>
+                        <div class="callout-grid">
+                            <div class="callout-item">
+                                <strong>Segmentación</strong>
+                                <span>Redes por capas (público/privado), listas de control y firewalls por aplicación para aislar el radio de impacto ante brechas.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>Cifrado</strong>
+                                <span>En tránsito (TLS 1.3) y en reposo (KMS con llaves gestionadas) con control de acceso granular.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>Hardening</strong>
+                                <span>Imágenes base seguras, parches automatizados, escaneo de vulnerabilidades y mínima superficie de ataque.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- Divider -->
+        <div class="module-divider" aria-hidden="true"><span>Semana 04</span></div>
+
+        <!-- ───── Semana 04 ───── -->
+        <article id="semana-04" class="module">
+            <div class="module-inner">
+
+                <div class="module-header" data-aos="fade-up">
+                    <div class="module-label">
+                        <span class="label-num">Semana 04</span>
+                        <span class="label-line"></span>
+                        <span class="label-cat">Infraestructura TI</span>
+                    </div>
+                    <h2 class="module-title">Infraestructura de TI y Modelos de Despliegue</h2>
+                    <p class="module-intro">El cimiento físico y lógico sobre el que descansan todos los sistemas. Sin infraestructura robusta, las aplicaciones sufren latencia, caídas y vulnerabilidades críticas.</p>
+                </div>
+
+                <!-- Video primero para este módulo -->
+                <div class="video-block" data-aos="fade-up">
+                    <div class="video-label"><i class="bi bi-play-circle-fill"></i> Recurso visual</div>
+                    <div class="video-wrap">
+                        <iframe src="https://www.youtube.com/embed/lgF3Kc-QCMQ" title="Guía Completa de Infraestructura TI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="video-caption">Exploración técnica sobre qué compone una Infraestructura de TI moderna.</p>
+                </div>
+
+                <!-- Modelos de despliegue -->
+                <div class="section-block" data-aos="fade-up">
+                    <h3>Modelos de despliegue de Infraestructura</h3>
+                    <div class="infra-grid">
+                        <div class="infra-card">
+                            <div class="ic-top">
+                                <i class="bi bi-building ic-icon"></i>
+                                <div class="ic-badge">On-Premise</div>
+                            </div>
+                            <p>La empresa compra y mantiene servidores, redes y almacenamiento en sus propias instalaciones. Control total sobre datos, pero requiere personal, refrigeración y mantenimiento constante.</p>
+                            <div class="ic-pros-cons">
+                                <span class="ic-pro"><i class="bi bi-plus-circle-fill"></i> Control total</span>
+                                <span class="ic-con"><i class="bi bi-dash-circle-fill"></i> Alto CapEx</span>
+                            </div>
+                        </div>
+                        <div class="infra-card ic-featured">
+                            <div class="ic-top">
+                                <i class="bi bi-cloud-fill ic-icon"></i>
+                                <div class="ic-badge ic-badge-accent">Cloud (IaaS)</div>
+                            </div>
+                            <p>Infraestructura propiedad de un tercero y alquilada como servicio a través de internet. Elasticidad ilimitada con modelo pay-as-you-go.</p>
+                            <div class="ic-pros-cons">
+                                <span class="ic-pro"><i class="bi bi-plus-circle-fill"></i> Escalabilidad</span>
+                                <span class="ic-pro"><i class="bi bi-plus-circle-fill"></i> Sin CapEx</span>
+                            </div>
+                        </div>
+                        <div class="infra-card">
+                            <div class="ic-top">
+                                <i class="bi bi-reception-4 ic-icon"></i>
+                                <div class="ic-badge">Edge Computing</div>
+                            </div>
+                            <p>Procesamiento físicamente cerca de donde se generan los datos (fábricas IoT) para responder en milisegundos sin enviar datos a un centro de datos centralizado.</p>
+                            <div class="ic-pros-cons">
+                                <span class="ic-pro"><i class="bi bi-plus-circle-fill"></i> Latencia mínima</span>
+                                <span class="ic-con"><i class="bi bi-dash-circle-fill"></i> Complejo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Componentes -->
+                <div class="section-block" data-aos="fade-up">
+                    <h3>Componentes del Data Center</h3>
+                    <div class="component-list">
+                        <div class="comp-item">
+                            <div class="comp-icon"><i class="bi bi-server"></i></div>
+                            <div class="comp-body">
+                                <h4>Hardware de Servidores</h4>
+                                <p>Equipos Rack/Blade con procesadores de alto rendimiento (Intel Xeon, AMD EPYC) y grandes cantidades de RAM, diseñados para operar 24/7.</p>
+                            </div>
+                        </div>
+                        <div class="comp-item">
+                            <div class="comp-icon"><i class="bi bi-device-hdd-fill"></i></div>
+                            <div class="comp-body">
+                                <h4>Almacenamiento Empresarial</h4>
+                                <p>Sistemas SAN y NAS con matrices de discos SSD empresariales que guardan petabytes de datos con redundancia RAID para evitar pérdida si un disco falla.</p>
+                            </div>
+                        </div>
+                        <div class="comp-item">
+                            <div class="comp-icon"><i class="bi bi-hdd-network-fill"></i></div>
+                            <div class="comp-body">
+                                <h4>Redes y Seguridad</h4>
+                                <p>Core Switches, routers perimetrales, firewalls de hardware, cableado estructurado y sistemas de balanceo de carga para distribuir el tráfico web.</p>
+                            </div>
+                        </div>
+                        <div class="comp-item">
+                            <div class="comp-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                            <div class="comp-body">
+                                <h4>Instalaciones y Energía</h4>
+                                <p>Sistemas de enfriamiento de precisión, suelos técnicos, sensores de humo/humedad y generadores UPS para garantizar la Alta Disponibilidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tipos de infraestructura - evolución -->
+                <div class="section-block" data-aos="fade-up">
+                    <h3>Evolución de la infraestructura</h3>
+                    <div class="evolution-track">
+                        <div class="evo-step">
+                            <div class="evo-dot"></div>
+                            <div class="evo-card">
+                                <span class="evo-era">Clásico</span>
+                                <h4>Infraestructura Tradicional</h4>
+                                <p>Servidores, almacenamiento y redes de diferentes fabricantes integrados manualmente. Compleja de escalar y consume mucho espacio físico en racks.</p>
+                            </div>
+                        </div>
+                        <div class="evo-step">
+                            <div class="evo-dot"></div>
+                            <div class="evo-card">
+                                <span class="evo-era">Convergente</span>
+                                <h4>Infraestructura Convergente (CI)</h4>
+                                <p>Paquete preconfigurado de fábrica con cómputo, almacenamiento y redes de un solo fabricante. Optimizado de fábrica, menos problemas de compatibilidad.</p>
+                            </div>
+                        </div>
+                        <div class="evo-step evo-current">
+                            <div class="evo-dot"></div>
+                            <div class="evo-card">
+                                <span class="evo-era evo-era-accent">Paradigma actual</span>
+                                <h4>Infraestructura Hiperconvergente (HCI)</h4>
+                                <p>Toda la inteligencia (cómputo, almacenamiento, redes) se abstrae mediante software dentro de servidores estándar. Escalar es tan simple como añadir un nodo al clúster.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recomendaciones finales -->
+                <div class="callout callout-green" data-aos="fade-up">
+                    <div class="callout-icon"><i class="bi bi-award-fill"></i></div>
+                    <div class="callout-body">
+                        <h3 class="callout-title">Recomendaciones de diseño (alto nivel)</h3>
+                        <div class="callout-grid">
+                            <div class="callout-item">
+                                <strong>Disponibilidad</strong>
+                                <span>Redundancia N+1 y eliminación de puntos únicos de falla (SPOF). Diseña para fallar sin interrumpir el servicio.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>Escalabilidad</strong>
+                                <span>Preferir escalado horizontal cuando sea posible: más nodos en paralelo, no agrandar un solo servidor.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>Continuidad</strong>
+                                <span>DRP/BCP documentados, pruebas periódicas de recuperación y runbooks operativos siempre actualizados.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-dark" data-aos="fade-up">
+                    <div class="callout-icon"><i class="bi bi-speedometer2"></i></div>
+                    <div class="callout-body">
+                        <h3 class="callout-title">Operación moderna: SLI · SLO · SLA</h3>
+                        <div class="callout-grid">
+                            <div class="callout-item">
+                                <strong>SLI</strong>
+                                <span>Métrica real del servicio (latencia, errores, disponibilidad, saturación).</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>SLO</strong>
+                                <span>Objetivo interno (ej. 99.9% mensual) y presupuesto de error para balancear velocidad vs. estabilidad.</span>
+                            </div>
+                            <div class="callout-item">
+                                <strong>SLA</strong>
+                                <span>Compromiso contractual hacia clientes. Debe basarse en SLIs medibles y monitoreo confiable.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        </section> <!-- /UNIDAD I --></main>
+
+    <!-- ══════════════════════ FOOTER ══════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <div class="brand">
+                        <div class="brand-icon">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <rect x="1" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="13" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="1" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M13 17H21M17 13V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="brand-name">TI Empresarial</span>
+                    </div>
+                    <p class="footer-tagline">Contenido educativo sobre conceptos, modelos y buenas prácticas comunes en TI empresarial. Contenido académico de consulta.</p>
+                </div>
+                <div class="footer-nav-col">
+                    <span class="footer-nav-title">Unidades</span>
+                    <nav class="footer-nav">
+                        <a href="unidad1.html">Unidad I · Administración en la Nube</a>
+                        <a href="unidad2.html">Unidad II · Aplicaciones empresariales</a>
+                        <a href="index.html">Unidad III · Próximamente</a>
+                        <a href="index.html">Unidad IV · Próximamente</a>
+                    </nav>
+                </div>
+                <div class="footer-ref-col">
+                    <span class="footer-nav-title">Referencias</span>
+                    <div class="footer-refs">
+                        <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="ref-pill">NIST <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://owasp.org/" target="_blank" rel="noopener" class="ref-pill">OWASP <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" rel="noopener" class="ref-pill">ISO 27001 <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="ref-pill">CNCF <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Material informativo académico</span>
+                <span class="footer-mono">Autor: Rogger Josue Palma Baldeón</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

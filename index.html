@@ -1,0 +1,318 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal especializado en gestión de la información, ecosistemas Cloud e infraestructura tecnológica empresarial.">
+    <title>Inicio | Fundamentos de Sistemas, Cloud e Infraestructura TI</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <a class="skip-link" href="index.html#contenido">Saltar al contenido</a>
+
+    <!-- ══════════════════════ HEADER ══════════════════════ -->
+    <header class="site-header">
+
+        <!-- TOP STRIP -->
+        <div class="topstrip">
+            <div class="topstrip-inner">
+                <div class="topstrip-left">
+                    <span class="mono-chip"><i class="bi bi-circle-fill pulse-dot"></i> Sistema activo</span>
+                    <span class="sep">·</span>
+                    <span class="mono-text">Arquitectura Cloud · Infraestructura TI · Sistemas de Información</span>
+                </div>
+                <div class="topstrip-right">
+                    <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="strip-link">NIST <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://owasp.org/" target="_blank" rel="noopener" class="strip-link">OWASP <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="strip-link">CNCF <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN NAVBAR -->
+        <nav class="navbar" id="navbar" aria-label="Navegación principal">
+            <div class="nav-inner">
+                <!-- Brand -->
+                <a class="brand" href="index.html#contenido" aria-label="Inicio">
+                    <div class="brand-icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="13" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="1" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M13 17H21M17 13V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">TI Empresarial</span>
+                        <span class="brand-sub">Fundamentos técnicos</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <ul class="nav-links" role="list">
+    <li><a href="index.html" class="nav-link"><span class="link-num">00</span><span>Inicio</span></a></li>
+    <li><a href="unidad1.html" class="nav-link"><span class="link-num">I</span><span>Unidad I</span></a></li>
+    <li><a href="unidad2.html" class="nav-link"><span class="link-num">II</span><span>Unidad II</span></a></li>
+</ul>
+
+                <!-- Right actions -->
+                <div class="nav-actions">
+                    <a href="unidad1.html#semana-03" class="nav-cta">
+                        <i class="bi bi-check2-square"></i>
+                        <span>Checklist</span>
+                    </a>
+                    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Nav Progress Line -->
+            <div class="nav-progress" id="navProgress"></div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <div class="mobile-menu-inner">
+    <nav>
+        <a href="index.html" class="mob-link"><span class="mob-num">00</span><span class="mob-label">Inicio</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad1.html" class="mob-link"><span class="mob-num">I</span><span class="mob-label">Unidad I</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad2.html" class="mob-link"><span class="mob-num">II</span><span class="mob-label">Unidad II</span><i class="bi bi-arrow-right"></i></a>
+    </nav>
+                <div class="mob-footer">
+                    <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="mob-ref">NIST</a>
+                    <a href="https://owasp.org/" target="_blank" rel="noopener" class="mob-ref">OWASP</a>
+                    <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="mob-ref">CNCF</a>
+                    <a href="https://www.iso.org/" target="_blank" rel="noopener" class="mob-ref">ISO 27001</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════ HERO ══════ -->
+        <section class="hero" aria-label="Portada">
+            <div class="hero-bg">
+                <div class="hero-orb orb-1"></div>
+                <div class="hero-orb orb-2"></div>
+                <div class="hero-orb orb-3"></div>
+                <div class="hero-grid"></div>
+            </div>
+
+            <div class="hero-inner">
+                <!-- Left column -->
+                <div class="hero-content" data-aos="fade-up" data-aos-duration="700">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-badge"><i class="bi bi-lightning-charge-fill"></i> Arquitectura moderna</span>
+                        <span class="eyebrow-badge"><i class="bi bi-shield-check-fill"></i> Seguridad aplicada</span>
+                        <span class="eyebrow-badge d-none d-md-inline-flex"><i class="bi bi-activity"></i> FinOps</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="title-line">Sistemas,</span>
+                        <span class="title-line accent">Cloud</span>
+                        <span class="title-line">e Infraestructura</span>
+                    </h1>
+
+                    <p class="hero-desc">Un recorrido técnico por conceptos esenciales, modelos de despliegue, administración y buenas prácticas para entornos empresariales modernos.</p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-n">4</span>
+                            <span class="stat-l">Módulos</span>
+                        </div>
+                        <div class="stat-div"></div>
+                        <div class="stat-item">
+                            <span class="stat-n">IaaS</span>
+                            <span class="stat-l">PaaS · SaaS</span>
+                        </div>
+                        <div class="stat-div"></div>
+                        <div class="stat-item">
+                            <span class="stat-n">Zero</span>
+                            <span class="stat-l">Trust Ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Module Map -->
+                <div class="hero-map" data-aos="fade-left" data-aos-duration="700" data-aos-delay="120">
+                    <div class="map-card">
+                        <div class="map-header">
+                            <div class="map-header-left">
+                                <i class="bi bi-terminal-fill"></i>
+                                <span>Mapa de contenido</span>
+                            </div>
+                            <span class="map-badge">Portal</span>
+                        </div>
+
+                        <div class="map-modules">
+                            <a href="unidad1.html" class="map-module">
+                                <div class="mod-icon mod-blue"><i class="bi bi-database-fill"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad I</span>
+                                    <span class="mod-tags">Semanas 01–04 · Cloud &amp; Infra</span>
+                                </div>
+                                <span class="mod-num">I</span>
+                            </a>
+                            <a href="unidad2.html" class="map-module">
+                                <div class="mod-icon mod-cyan"><i class="bi bi-cloud-fill"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad II</span>
+                                    <span class="mod-tags">Semana 05 · BI &amp; Datos</span>
+                                </div>
+                                <span class="mod-num">II</span>
+                            </a>
+                            <a href="index.html#unidad-iii" class="map-module">
+                                <div class="mod-icon mod-violet"><i class="bi bi-hourglass-split"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad III</span>
+                                    <span class="mod-tags">Próximamente</span>
+                                </div>
+                                <span class="mod-num">III</span>
+                            </a>
+                            <a href="index.html#unidad-iv" class="map-module">
+                                <div class="mod-icon mod-green"><i class="bi bi-hourglass-split"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad IV</span>
+                                    <span class="mod-tags">Próximamente</span>
+                                </div>
+                                <span class="mod-num">IV</span>
+                            </a>
+                        </div>
+
+                        <div class="map-footer">
+                            <i class="bi bi-mouse2"></i> Scroll para explorar o usa el menú
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll hint -->
+            <div class="scroll-hint" aria-hidden="true">
+                <span>scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+    </header>
+
+    <!-- ══════════════════════ MAIN ══════════════════════ -->
+    <main id="contenido">
+    <section id="unidad-i" class="unit">
+        <div class="unit-header" data-aos="fade-up">
+            <div class="unit-label">
+                <span class="unit-num">INICIO</span>
+                <span class="unit-pill">Portal académico por unidades</span>
+            </div>
+            <p class="unit-desc">Este portal organiza el contenido del curso en unidades para facilitar la navegación, el estudio semanal y la consulta de recursos sobre Administración en la Nube y Sistemas de Información.</p>
+            <div class="unit-weeks">
+                <a class="week-chip" href="unidad1.html"><span>Unidad I</span><small>Semanas 01-04</small></a>
+                <a class="week-chip" href="unidad2.html"><span>Unidad II</span><small>Semana 05</small></a>
+            </div>
+        </div>
+
+        <article class="module">
+            <div class="module-inner">
+                <div class="module-header" data-aos="fade-up">
+                    <div class="module-label">
+                        <span class="label-num">DASHBOARD</span>
+                        <span class="label-line"></span>
+                        <span class="label-cat">Acceso rápido</span>
+                    </div>
+                    <h2 class="module-title">Navega por unidades del curso</h2>
+                    <p class="module-intro">Selecciona una unidad para revisar contenido técnico, actividades y recursos audiovisuales por semana.</p>
+                </div>
+
+                <div class="type-grid" data-aos="fade-up">
+                    <a href="unidad1.html" class="type-card type-card-link">
+                        <div class="tc-header">
+                            <div class="tc-icon bg-blue"><i class="bi bi-database-fill"></i></div>
+                            <span class="tc-tag">Unidad I</span>
+                        </div>
+                        <h4>Semanas 01-04</h4>
+                        <p class="tc-full">Fundamentos cloud e infraestructura</p>
+                        <p class="tc-desc">Sistemas de información, computación en la nube, administración cloud e infraestructura TI.</p>
+                        <span class="strip-link">Abrir unidad <i class="bi bi-arrow-right"></i></span>
+                    </a>
+
+                    <a href="unidad2.html" class="type-card type-card-link">
+                        <div class="tc-header">
+                            <div class="tc-icon bg-cyan"><i class="bi bi-graph-up-arrow"></i></div>
+                            <span class="tc-tag">Unidad II</span>
+                        </div>
+                        <h4>Semana 05</h4>
+                        <p class="tc-full">Sistemas en negocios y BI</p>
+                        <p class="tc-desc">Aplicaciones empresariales de SI, inteligencia de negocios y administración de datos.</p>
+                        <span class="strip-link">Abrir unidad <i class="bi bi-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
+
+    <!-- ══════════════════════ FOOTER ══════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <div class="brand">
+                        <div class="brand-icon">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <rect x="1" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="13" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="1" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M13 17H21M17 13V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="brand-name">TI Empresarial</span>
+                    </div>
+                    <p class="footer-tagline">Contenido educativo sobre conceptos, modelos y buenas prácticas comunes en TI empresarial. Contenido académico de consulta.</p>
+                </div>
+                <div class="footer-nav-col">
+                    <span class="footer-nav-title">Unidades</span>
+                    <nav class="footer-nav">
+                        <a href="unidad1.html">Unidad I · Administración en la Nube</a>
+                        <a href="unidad2.html">Unidad II · Aplicaciones empresariales</a>
+                        <a href="index.html">Unidad III · Próximamente</a>
+                        <a href="index.html">Unidad IV · Próximamente</a>
+                    </nav>
+                </div>
+                <div class="footer-ref-col">
+                    <span class="footer-nav-title">Referencias</span>
+                    <div class="footer-refs">
+                        <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="ref-pill">NIST <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://owasp.org/" target="_blank" rel="noopener" class="ref-pill">OWASP <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" rel="noopener" class="ref-pill">ISO 27001 <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="ref-pill">CNCF <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Material informativo académico</span>
+                <span class="footer-mono">Autor: Rogger Josue Palma Baldeón</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
