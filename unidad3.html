@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal especializado en gestión de la información, ecosistemas Cloud e infraestructura tecnológica empresarial.">
+    <title>Unidad III | Gobierno y gestión de servicios TI</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <a class="skip-link" href="index.html#contenido">Saltar al contenido</a>
+
+    <!-- ══════════════════════ HEADER ══════════════════════ -->
+    <header class="site-header">
+
+        <!-- TOP STRIP -->
+        <div class="topstrip">
+            <div class="topstrip-inner">
+                <div class="topstrip-left">
+                    <span class="mono-chip"><i class="bi bi-circle-fill pulse-dot"></i> Sistema activo</span>
+                    <span class="sep">·</span>
+                    <span class="mono-text">Arquitectura Cloud · Infraestructura TI · Sistemas de Información</span>
+                </div>
+                <div class="topstrip-right">
+                    <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="strip-link">NIST <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://owasp.org/" target="_blank" rel="noopener" class="strip-link">OWASP <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="strip-link">CNCF <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN NAVBAR -->
+        <nav class="navbar" id="navbar" aria-label="Navegación principal">
+            <div class="nav-inner">
+                <!-- Brand -->
+                <a class="brand" href="index.html#contenido" aria-label="Inicio">
+                    <div class="brand-icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="13" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="1" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M13 17H21M17 13V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">TI Empresarial</span>
+                        <span class="brand-sub">Fundamentos técnicos</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <ul class="nav-links" role="list">
+                    <li><a href="index.html" class="nav-link"><span class="link-num">00</span><span>Inicio</span></a></li>
+                    <li><a href="unidad1.html" class="nav-link"><span class="link-num">I</span><span>Unidad I</span></a></li>
+                    <li><a href="unidad2.html" class="nav-link"><span class="link-num">II</span><span>Unidad II</span></a></li>
+                    <li><a href="unidad3.html" class="nav-link"><span class="link-num">III</span><span>Unidad III</span></a></li>
+                    <li><a href="unidad4.html" class="nav-link"><span class="link-num">IV</span><span>Unidad IV</span></a></li>
+</ul>
+
+                <!-- Right actions -->
+                <div class="nav-actions">
+                    <a href="unidad3.html#semana-09" class="nav-cta">
+                        <i class="bi bi-check2-square"></i>
+                        <span>Checklist</span>
+                    </a>
+                    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Nav Progress Line -->
+            <div class="nav-progress" id="navProgress"></div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <div class="mobile-menu-inner">
+    <nav>
+        <a href="index.html" class="mob-link"><span class="mob-num">00</span><span class="mob-label">Inicio</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad1.html" class="mob-link"><span class="mob-num">I</span><span class="mob-label">Unidad I</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad2.html" class="mob-link"><span class="mob-num">II</span><span class="mob-label">Unidad II</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad3.html" class="mob-link"><span class="mob-num">I</span><span class="mob-label">Unidad III</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad4.html" class="mob-link"><span class="mob-num">II</span><span class="mob-label">Unidad IV</span><i class="bi bi-arrow-right"></i></a>
+    </nav>
+                <div class="mob-footer">
+                    <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="mob-ref">NIST</a>
+                    <a href="https://owasp.org/" target="_blank" rel="noopener" class="mob-ref">OWASP</a>
+                    <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="mob-ref">CNCF</a>
+                    <a href="https://www.iso.org/" target="_blank" rel="noopener" class="mob-ref">ISO 27001</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════ HERO ══════ -->
+        <section class="hero" aria-label="Portada">
+            <div class="hero-bg">
+                <div class="hero-orb orb-1"></div>
+                <div class="hero-orb orb-2"></div>
+                <div class="hero-orb orb-3"></div>
+                <div class="hero-grid"></div>
+            </div>
+
+            <div class="hero-inner">
+                <!-- Left column -->
+                <div class="hero-content" data-aos="fade-up" data-aos-duration="700">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-badge"><i class="bi bi-lightning-charge-fill"></i> Arquitectura moderna</span>
+                        <span class="eyebrow-badge"><i class="bi bi-shield-check-fill"></i> Seguridad aplicada</span>
+                        <span class="eyebrow-badge d-none d-md-inline-flex"><i class="bi bi-activity"></i> FinOps</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="title-line">Sistemas,</span>
+                        <span class="title-line accent">Cloud</span>
+                        <span class="title-line">e Infraestructura</span>
+                    </h1>
+
+                    <p class="hero-desc">Un recorrido técnico por conceptos esenciales, modelos de despliegue, administración y buenas prácticas para entornos empresariales modernos.</p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-n">4</span>
+                            <span class="stat-l">Módulos</span>
+                        </div>
+                        <div class="stat-div"></div>
+                        <div class="stat-item">
+                            <span class="stat-n">IaaS</span>
+                            <span class="stat-l">PaaS · SaaS</span>
+                        </div>
+                        <div class="stat-div"></div>
+                        <div class="stat-item">
+                            <span class="stat-n">Zero</span>
+                            <span class="stat-l">Trust Ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Module Map -->
+                <div class="hero-map" data-aos="fade-left" data-aos-duration="700" data-aos-delay="120">
+                    <div class="map-card">
+                        <div class="map-header">
+                            <div class="map-header-left">
+                                <i class="bi bi-terminal-fill"></i>
+                                <span>Mapa de contenido</span>
+                            </div>
+                            <span class="map-badge">Unidad III</span>
+                        </div>
+
+                        <div class="map-modules">
+                            <a href="unidad1.html" class="map-module">
+                                <div class="mod-icon mod-blue"><i class="bi bi-database-fill"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad I</span>
+                                    <span class="mod-tags">Semanas 01–04 · Cloud &amp; Infra</span>
+                                </div>
+                                <span class="mod-num">I</span>
+                            </a>
+                            <a href="unidad2.html" class="map-module">
+                                <div class="mod-icon mod-cyan"><i class="bi bi-cloud-fill"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad II</span>
+                                    <span class="mod-tags">Semanas 05–08 · BI &amp; Apps</span>
+                                </div>
+                                <span class="mod-num">II</span>
+                            </a>
+                            <a href="unidad3.html" class="map-module">
+                                <div class="mod-icon mod-violet"><i class="bi bi-shield-check"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad III</span>
+                                    <span class="mod-tags">Semanas 09–12 · ITIL &amp; COBIT</span>
+                                </div>
+                                <span class="mod-num">III</span>
+                            </a>
+                            <a href="unidad4.html" class="map-module">
+                                <div class="mod-icon mod-green"><i class="bi bi-code-slash"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad IV</span>
+                                    <span class="mod-tags">Semanas 13–16 · SDLC</span>
+                                </div>
+                                <span class="mod-num">IV</span>
+                            </a>
+                        </div>
+
+                        <div class="map-footer">
+                            <i class="bi bi-mouse2"></i> Scroll para explorar o usa el menú
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll hint -->
+            <div class="scroll-hint" aria-hidden="true">
+                <span>scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+    </header>
+
+    <!-- ══════════════════════ MAIN ══════════════════════ -->
+    <main id="contenido"><section id="unidad-iii" class="unit">
+            <div class="unit-header" data-aos="fade-up">
+                <div class="unit-label">
+                    <span class="unit-num">UNIDAD III</span>
+                    <span class="unit-pill">Gobierno de TI y gestión de servicios</span>
+                </div>
+                <p class="unit-desc">Esta unidad aborda cómo las organizaciones gobiernan la tecnología, alinean TI con la estrategia de negocio y operan servicios de calidad mediante frameworks reconocidos como COBIT, ITIL e ISO 38500.</p>
+                <div class="unit-weeks">
+                    <a class="week-chip" href="#semana-09"><span>Semana 09</span><small>Gobierno de TI</small></a>
+                    <a class="week-chip" href="#semana-10"><span>Semana 10</span><small>Gestión de servicios</small></a>
+                    <a class="week-chip" href="#semana-11"><span>Semana 11</span><small>Diseño y transición</small></a>
+                    <a class="week-chip" href="#semana-12"><span>Semana 12</span><small>Operación y soporte</small></a>
+                </div>
+            </div>
+
+            <article id="semana-09" class="module">
+                <div class="module-inner">
+                    <div class="module-header" data-aos="fade-up">
+                        <div class="module-label">
+                            <span class="label-num">Semana 09</span>
+                            <span class="label-line"></span>
+                            <span class="label-cat">Gobierno de TI</span>
+                        </div>
+                        <h2 class="module-title">Gobierno de Tecnologías de Información</h2>
+                        <p class="module-intro">Marco de responsabilidades, procesos y métricas que aseguran que TI genere valor, gestione riesgos y cumpla con las expectativas de la alta dirección y los stakeholders.</p>
+                    </div>
+
+                    <div class="callout callout-blue" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-bank2"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">Pilares del gobierno de TI</h3>
+                            <div class="callout-grid">
+                                <div class="callout-item">
+                                    <strong>Alineamiento estratégico</strong>
+                                    <span>Conectar inversiones y proyectos de TI con objetivos de negocio, OKRs y ventaja competitiva. El comité de dirección valida prioridades y presupuesto.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Creación de valor</strong>
+                                    <span>Medir el retorno de TI mediante beneficios tangibles (ingresos, eficiencia) e intangibles (agilidad, experiencia del cliente, innovación).</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Gestión de riesgos</strong>
+                                    <span>Identificar, evaluar y mitigar riesgos tecnológicos, de ciberseguridad, cumplimiento y continuidad con apetito de riesgo definido.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-prose" data-aos="fade-up">
+                        <h3>Gestión de procesos en el gobierno de TI</h3>
+                        <p>El gobierno de TI no es lo mismo que la gestión de TI: el <strong>gobierno</strong> define qué decisiones toma la alta dirección (inversiones, arquitectura, riesgos); la <strong>gestión</strong> ejecuta esas decisiones en operaciones diarias. Los procesos de gobierno incluyen planificación estratégica de TI, gestión de portafolio, arquitectura empresarial, gestión de proveedores y auditoría de controles.</p>
+                        <p>Organismos como <strong>ISACA</strong> promueven que el gobierno de TI sea evaluable, auditable y mejorable continuamente mediante modelos de madurez y métricas balanceadas (Balanced Scorecard para TI).</p>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Frameworks de referencia</h3>
+                        <div class="type-grid">
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-blue"><i class="bi bi-diagram-3-fill"></i></div>
+                                    <span class="tc-tag">Gobierno</span>
+                                </div>
+                                <h4>COBIT 2019</h4>
+                                <p class="tc-full">Control Objectives for Information and Related Technologies</p>
+                                <p class="tc-desc">Framework de ISACA con 40 objetivos de gobierno y gestión, 5 dominios (EDM, APO, BAI, DSS, MEA) y guías de diseño para evaluar madurez y cumplimiento.</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-cyan"><i class="bi bi-gear-wide-connected"></i></div>
+                                    <span class="tc-tag">Servicios</span>
+                                </div>
+                                <h4>ITIL 4</h4>
+                                <p class="tc-full">Information Technology Infrastructure Library</p>
+                                <p class="tc-desc">Mejores prácticas de AXELOS para gestión de servicios de TI. Service Value System (SVS), cadena de valor del servicio y 34 prácticas de gestión.</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-violet"><i class="bi bi-file-earmark-check-fill"></i></div>
+                                    <span class="tc-tag">Norma ISO</span>
+                                </div>
+                                <h4>ISO/IEC 38500</h4>
+                                <p class="tc-full">Governance of IT for the Organization</p>
+                                <p class="tc-desc">Estándar internacional con 6 principios: responsabilidad, estrategia, adquisición, desempeño, conformidad y comportamiento humano. Orientado a directivos.</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-gold"><i class="bi bi-shield-lock-fill"></i></div>
+                                    <span class="tc-tag">Complemento</span>
+                                </div>
+                                <h4>ISO 27001 / NIST CSF</h4>
+                                <p class="tc-full">Seguridad de la información</p>
+                                <p class="tc-desc">Complementan el gobierno con controles de seguridad. ISO 27001 certificable; NIST CSF con funciones Identify, Protect, Detect, Respond, Recover.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Comparativa COBIT vs ITIL vs ISO 38500</h3>
+                        <div class="deploy-grid">
+                            <div class="deploy-card">
+                                <div class="dc-stripe stripe-blue"></div>
+                                <div class="dc-body">
+                                    <i class="bi bi-bank dc-icon"></i>
+                                    <h4>COBIT 2019</h4>
+                                    <p>Enfoque en <strong>gobierno y gestión</strong> integral. Ideal para auditoría, cumplimiento y alineamiento con objetivos de negocio. Usado por auditores y CIOs.</p>
+                                    <div class="dc-tags"><span>Gobierno</span><span>Auditoría</span><span>ISACA</span></div>
+                                </div>
+                            </div>
+                            <div class="deploy-card">
+                                <div class="dc-stripe stripe-cyan"></div>
+                                <div class="dc-body">
+                                    <i class="bi bi-headset dc-icon"></i>
+                                    <h4>ITIL 4</h4>
+                                    <p>Enfoque en <strong>gestión de servicios</strong> y entrega de valor al cliente interno/externo. Ideal para operaciones, service desk y mejora continua.</p>
+                                    <div class="dc-tags"><span>Servicios</span><span>Operaciones</span><span>AXELOS</span></div>
+                                </div>
+                            </div>
+                            <div class="deploy-card">
+                                <div class="dc-stripe stripe-violet"></div>
+                                <div class="dc-body">
+                                    <i class="bi bi-file-earmark-text dc-icon"></i>
+                                    <h4>ISO 38500</h4>
+                                    <p>Enfoque en <strong>principios directivos</strong> para la junta directiva. Marco de alto nivel, no prescriptivo. Base para políticas corporativas de TI.</p>
+                                    <div class="dc-tags"><span>Directivos</span><span>Principios</span><span>ISO</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Diagrama: cadena de gobierno de TI</h3>
+                        <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:2rem;overflow-x:auto;">
+                            <svg viewBox="0 0 700 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;display:block;margin:0 auto;" aria-label="Cadena de gobierno TI">
+                                <rect x="250" y="10" width="200" height="45" rx="6" fill="none" stroke="#6366f1" stroke-width="2"/>
+                                <text x="350" y="38" text-anchor="middle" fill="#e2e8f0" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Junta Directiva</text>
+                                <line x1="350" y1="55" x2="350" y2="75" stroke="#475569" stroke-width="2"/>
+                                <rect x="250" y="75" width="200" height="45" rx="6" fill="none" stroke="#06b6d4" stroke-width="2"/>
+                                <text x="350" y="103" text-anchor="middle" fill="#e2e8f0" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Comité de Gobierno TI</text>
+                                <line x1="350" y1="120" x2="350" y2="140" stroke="#475569" stroke-width="2"/>
+                                <rect x="250" y="140" width="200" height="45" rx="6" fill="none" stroke="#22c55e" stroke-width="2"/>
+                                <text x="350" y="168" text-anchor="middle" fill="#e2e8f0" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">CIO / Director TI</text>
+                                <line x1="350" y1="185" x2="350" y2="205" stroke="#475569" stroke-width="2"/>
+                                <rect x="150" y="205" width="120" height="35" rx="4" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+                                <text x="210" y="227" text-anchor="middle" fill="#94a3b8" font-family="DM Sans,sans-serif" font-size="11">Operaciones</text>
+                                <rect x="290" y="205" width="120" height="35" rx="4" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+                                <text x="350" y="227" text-anchor="middle" fill="#94a3b8" font-family="DM Sans,sans-serif" font-size="11">Proyectos</text>
+                                <rect x="430" y="205" width="120" height="35" rx="4" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+                                <text x="490" y="227" text-anchor="middle" fill="#94a3b8" font-family="DM Sans,sans-serif" font-size="11">Seguridad</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="video-block" data-aos="fade-up">
+                        <div class="video-label"><i class="bi bi-play-circle-fill"></i> Recurso visual</div>
+                        <div class="video-wrap">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/_0gVsurgIfM?si=xSibCKrRJE4Aasx4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Introducción al gobierno de TI y frameworks COBIT e ISO 38500.</p>
+                    </div>
+                </div>
+            </article>
+
+        <div class="module-divider" aria-hidden="true"><span>Semana 10</span></div>
+
+            <article id="semana-10" class="module">
+                <div class="module-inner">
+                    <div class="module-header" data-aos="fade-up">
+                        <div class="module-label">
+                            <span class="label-num">Semana 10</span>
+                            <span class="label-line"></span>
+                            <span class="label-cat">Gestión de servicios</span>
+                        </div>
+                        <h2 class="module-title">Gestión de Servicios de TI (ITIL)</h2>
+                        <p class="module-intro">Cómo diseñar, entregar y mejorar servicios de TI que satisfagan necesidades del negocio con calidad, eficiencia y valor medible.</p>
+                    </div>
+
+                    <div class="callout callout-cyan" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-diagram-2-fill"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">ITIL 4 · Service Value System</h3>
+                            <div class="callout-grid">
+                                <div class="callout-item">
+                                    <strong>Estrategia del servicio</strong>
+                                    <span>Define la visión, posicionamiento y diferenciación de los servicios de TI. Alinea capacidades con demanda del negocio y tendencias tecnológicas.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Portafolio de servicios</strong>
+                                    <span>Inventario de todos los servicios (pipeline, catálogo, retirados). Prioriza inversiones y gestiona el ciclo de vida completo.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Catálogo de servicios</strong>
+                                    <span>Documento publicado para usuarios con servicios disponibles, descripción, SLAs, costos y proceso de solicitud.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Acuerdos de nivel de servicio (SLA)</h3>
+                        <div class="pillar-list">
+                            <div class="pillar-item">
+                                <span class="pillar-n">01</span>
+                                <div class="pillar-body">
+                                    <strong>Definición</strong>
+                                    <p>Contrato formal entre proveedor de servicio y cliente que especifica métricas, objetivos, responsabilidades y consecuencias por incumplimiento.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">02</span>
+                                <div class="pillar-body">
+                                    <strong>Componentes</strong>
+                                    <p>Disponibilidad (% uptime), tiempo de respuesta, tiempo de resolución, ventanas de mantenimiento, escalamiento y reportes periódicos.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">03</span>
+                                <div class="pillar-body">
+                                    <strong>Jerarquía</strong>
+                                    <p><strong>SLA</strong> (cliente-proveedor), <strong>OLA</strong> (Operational Level Agreement, interno) y <strong>UC</strong> (Underpinning Contract con terceros).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Casos reales: Amazon, Microsoft e IBM</h3>
+                        <div class="function-list">
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-cloud-fill"></i></div>
+                                <div class="fn-body">
+                                    <h4>Amazon Web Services (AWS)</h4>
+                                    <p>Publica SLAs por servicio (EC2 99.99%, S3 99.999999999%). Operaciones basadas en SRE (Site Reliability Engineering): error budgets, postmortems blameless y automatización de remediación. Service Health Dashboard en tiempo real.</p>
+                                </div>
+                            </div>
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-microsoft"></i></div>
+                                <div class="fn-body">
+                                    <h4>Microsoft Azure &amp; M365</h4>
+                                    <p>Service Trust Portal con SLAs contractuales, status page global y cumplimiento ISO/SOC. Equipos de Customer Service Engineering gestionan incidencias masivas con war rooms y comunicación proactiva.</p>
+                                </div>
+                            </div>
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-cpu-fill"></i></div>
+                                <div class="fn-body">
+                                    <h4>IBM Global Technology Services</h4>
+                                    <p>Decadas de experiencia ITIL en outsourcing de TI. Gestionan service desks globales 24/7, ITSM con IBM Control Desk y SLAs personalizados para Fortune 500 con penalidades por incumplimiento.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callout callout-dark" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-speedometer2"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">Métricas clave de gestión de servicios</h3>
+                            <div class="callout-grid">
+                                <div class="callout-item">
+                                    <strong>CSAT / NPS</strong>
+                                    <span>Satisfacción del cliente y disposición a recomendar el servicio de TI.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>MTTR / MTBF</strong>
+                                    <span>Tiempo medio de reparación y tiempo medio entre fallas. Indicadores de confiabilidad operativa.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>First Contact Resolution</strong>
+                                    <span>Porcentaje de incidencias resueltas en el primer contacto con el service desk.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-block" data-aos="fade-up">
+                        <div class="video-label"><i class="bi bi-play-circle-fill"></i> Recurso visual</div>
+                        <div class="video-wrap">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/pYB6ZhUOOSM?si=f3MNB7hG-CYCkp0P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Panorama de ITIL 4: Service Value System y cadena de valor del servicio.</p>
+                    </div>
+                </div>
+            </article>
+
+        <div class="module-divider" aria-hidden="true"><span>Semana 11</span></div>
+
+            <article id="semana-11" class="module">
+                <div class="module-inner">
+                    <div class="module-header" data-aos="fade-up">
+                        <div class="module-label">
+                            <span class="label-num">Semana 11</span>
+                            <span class="label-line"></span>
+                            <span class="label-cat">Diseño y transición</span>
+                        </div>
+                        <h2 class="module-title">Diseño y Transición del Servicio</h2>
+                        <p class="module-intro">Fases del ciclo de vida ITIL que transforman requerimientos de negocio en servicios operativos estables, con gestión de activos, configuración, liberaciones y validación.</p>
+                    </div>
+
+                    <div class="content-prose" data-aos="fade-up">
+                        <h3>Diseño del servicio</h3>
+                        <p>El <strong>diseño del servicio</strong> (Service Design) produce soluciones que cumplen requerimientos de negocio en cinco aspectos: servicios, procesos, tecnología, arquitectura y proveedores. Incluye diseño de capacidad, disponibilidad, continuidad (ITSCM), seguridad de la información y cumplimiento normativo.</p>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Procesos de diseño y transición</h3>
+                        <div class="pillar-list">
+                            <div class="pillar-item">
+                                <span class="pillar-n">01</span>
+                                <div class="pillar-body">
+                                    <strong>Gestión de activos de TI</strong>
+                                    <p>Inventario de hardware, software, licencias y contratos. Optimiza costos, cumple auditorías y soporta decisiones de renovación o retiro.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">02</span>
+                                <div class="pillar-body">
+                                    <strong>Gestión de configuración (CMDB)</strong>
+                                    <p>Base de datos de configuración con relaciones entre CIs (Configuration Items): servidores, apps, redes. Fuente de verdad para impacto de cambios e incidencias.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">03</span>
+                                <div class="pillar-body">
+                                    <strong>Gestión de liberaciones (Release Management)</strong>
+                                    <p>Planifica, prueba y despliega releases de software/hardware en entornos controlados (dev → test → staging → prod) con rollback planificado.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">04</span>
+                                <div class="pillar-body">
+                                    <strong>Validación y pruebas</strong>
+                                    <p>Service Validation and Testing asegura que releases cumplen requerimientos funcionales, de rendimiento, seguridad y aceptación del usuario (UAT).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Pipeline de transición al servicio</h3>
+                        <div class="evolution-track">
+                            <div class="evo-step">
+                                <div class="evo-dot"></div>
+                                <div class="evo-card">
+                                    <span class="evo-era">Fase 1</span>
+                                    <h4>Análisis de requerimientos</h4>
+                                    <p>Documentación de necesidades, SLAs objetivo, restricciones y criterios de aceptación firmados con el negocio.</p>
+                                </div>
+                            </div>
+                            <div class="evo-step">
+                                <div class="evo-dot"></div>
+                                <div class="evo-card">
+                                    <span class="evo-era">Fase 2</span>
+                                    <h4>Diseño y arquitectura</h4>
+                                    <p>Blueprint técnico, diagramas de arquitectura, plan de capacidad y diseño de seguridad alineado a políticas corporativas.</p>
+                                </div>
+                            </div>
+                            <div class="evo-step">
+                                <div class="evo-dot"></div>
+                                <div class="evo-card">
+                                    <span class="evo-era">Fase 3</span>
+                                    <h4>Build &amp; Test</h4>
+                                    <p>Construcción, pruebas unitarias, integración, rendimiento, seguridad (SAST/DAST) y UAT con usuarios clave.</p>
+                                </div>
+                            </div>
+                            <div class="evo-step evo-current">
+                                <div class="evo-dot"></div>
+                                <div class="evo-card">
+                                    <span class="evo-era evo-era-accent">Fase 4</span>
+                                    <h4>Deploy &amp; Handover</h4>
+                                    <p>Despliegue en producción, actualización de CMDB, capacitación operativa y transferencia formal al equipo de soporte.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callout callout-green" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-check2-all"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">Checklist de transición exitosa</h3>
+                            <div class="checklist-grid">
+                                <div class="cl-item">
+                                    <div class="cl-icon"><i class="bi bi-clipboard2-check-fill"></i></div>
+                                    <div>
+                                        <strong>Documentación completa</strong>
+                                        <p>Runbooks, diagramas, contactos de escalamiento y procedimientos de recuperación documentados.</p>
+                                    </div>
+                                </div>
+                                <div class="cl-item">
+                                    <div class="cl-icon"><i class="bi bi-database-fill"></i></div>
+                                    <div>
+                                        <strong>CMDB actualizada</strong>
+                                        <p>Todos los CIs registrados con relaciones, owners y estado operativo verificado.</p>
+                                    </div>
+                                </div>
+                                <div class="cl-item">
+                                    <div class="cl-icon"><i class="bi bi-bug-fill"></i></div>
+                                    <div>
+                                        <strong>Pruebas aprobadas</strong>
+                                        <p>Acta de aceptación firmada con resultados de UAT, rendimiento y pruebas de regresión.</p>
+                                    </div>
+                                </div>
+                                <div class="cl-item">
+                                    <div class="cl-icon"><i class="bi bi-people-fill"></i></div>
+                                    <div>
+                                        <strong>Capacitación operativa</strong>
+                                        <p>Equipo de soporte entrenado en monitoreo, escalamiento y resolución de incidencias del nuevo servicio.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        <div class="module-divider" aria-hidden="true"><span>Semana 12</span></div>
+
+            <article id="semana-12" class="module">
+                <div class="module-inner">
+                    <div class="module-header" data-aos="fade-up">
+                        <div class="module-label">
+                            <span class="label-num">Semana 12</span>
+                            <span class="label-line"></span>
+                            <span class="label-cat">Operación y soporte</span>
+                        </div>
+                        <h2 class="module-title">Operación y Soporte de Servicios de TI</h2>
+                        <p class="module-intro">Procesos que mantienen servicios estables en producción: gestión de eventos, incidencias, problemas, cambios, conocimiento y el service desk como punto único de contacto.</p>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Procesos operativos ITIL</h3>
+                        <div class="type-grid">
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-blue"><i class="bi bi-arrow-repeat"></i></div>
+                                    <span class="tc-tag">Cambio</span>
+                                </div>
+                                <h4>Gestión del cambio</h4>
+                                <p class="tc-desc">Evalúa, autoriza e implementa cambios con mínimo riesgo. Tipos: estándar, normal, emergencia. CAB (Change Advisory Board) para cambios de alto impacto.</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-violet"><i class="bi bi-book-fill"></i></div>
+                                    <span class="tc-tag">Conocimiento</span>
+                                </div>
+                                <h4>Gestión del conocimiento</h4>
+                                <p class="tc-desc">Base de conocimiento (KB), artículos de solución, lecciones aprendidas y retención de expertise. Reduce MTTR y dependencia de individuos clave.</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-cyan"><i class="bi bi-broadcast"></i></div>
+                                    <span class="tc-tag">Eventos</span>
+                                </div>
+                                <h4>Gestión de eventos</h4>
+                                <p class="tc-desc">Monitoreo proactivo de infraestructura y aplicaciones. Filtra eventos significativos, genera alertas y correlaciona con incidencias potenciales.</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-gold"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                                    <span class="tc-tag">Incidencias</span>
+                                </div>
+                                <h4>Gestión de incidencias</h4>
+                                <p class="tc-desc">Restaura el servicio lo más rápido posible. Priorización por impacto × urgencia. Escalamiento técnico y funcional según matrices definidas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Gestión de problemas y Service Desk</h3>
+                        <div class="function-list">
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-search"></i></div>
+                                <div class="fn-body">
+                                    <h4>Gestión de problemas</h4>
+                                    <p>Investiga la <strong>causa raíz</strong> de incidencias recurrentes. Diferencia incidencia (síntoma) de problema (causa). Técnicas: análisis de Ishikawa, 5 Whys, KEDB (Known Error Database). Objetivo: eliminar la causa, no solo el síntoma.</p>
+                                </div>
+                            </div>
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-headset"></i></div>
+                                <div class="fn-body">
+                                    <h4>Service Desk (ITSM)</h4>
+                                    <p>Punto único de contacto para usuarios. Canales: teléfono, chat, portal self-service, email. Herramientas: ServiceNow, Jira Service Management, Freshservice. Funciones: registro, categorización, resolución N1/N2/N3 y escalamiento.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callout callout-dark" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">Flujo integrado: evento → incidencia → problema → cambio</h3>
+                            <div class="callout-grid">
+                                <div class="callout-item">
+                                    <strong>Evento</strong>
+                                    <span>Alerta de monitoreo detecta anomalía (CPU &gt; 95%, disco lleno).</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Incidencia</strong>
+                                    <span>Service desk registra ticket, prioriza y restaura servicio (workaround o fix).</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Problema → Cambio</strong>
+                                    <span>Análisis de causa raíz genera RFC (Request for Change) para solución permanente.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-block" data-aos="fade-up">
+                        <div class="video-label"><i class="bi bi-play-circle-fill"></i> Recurso visual</div>
+                        <div class="video-wrap">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/x6I95Eqy4dA?si=9REByO2vTSHLjO-2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                         </div>
+                        <p class="video-caption">Operación de servicios ITIL: incidencias, problemas y service desk en la práctica.</p>
+                    </div>
+
+                    <div class="callout callout-green" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-collection-fill"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">Resumen visual · Unidad III</h3>
+                            <div class="evolution-track">
+                                <div class="evo-step">
+                                    <div class="evo-dot"></div>
+                                    <div class="evo-card">
+                                        <span class="evo-era">Semana 09</span>
+                                        <h4>Gobierno de TI</h4>
+                                        <p>COBIT, ITIL, ISO 38500. Alineamiento estratégico, valor y gestión de riesgos.</p>
+                                    </div>
+                                </div>
+                                <div class="evo-step">
+                                    <div class="evo-dot"></div>
+                                    <div class="evo-card">
+                                        <span class="evo-era">Semana 10</span>
+                                        <h4>Gestión de servicios</h4>
+                                        <p>ITIL 4, portafolio, catálogo, SLA. Casos Amazon, Microsoft, IBM.</p>
+                                    </div>
+                                </div>
+                                <div class="evo-step">
+                                    <div class="evo-dot"></div>
+                                    <div class="evo-card">
+                                        <span class="evo-era">Semana 11</span>
+                                        <h4>Diseño y transición</h4>
+                                        <p>Activos, CMDB, liberaciones, validación y pruebas de servicio.</p>
+                                    </div>
+                                </div>
+                                <div class="evo-step evo-current">
+                                    <div class="evo-dot"></div>
+                                    <div class="evo-card">
+                                        <span class="evo-era evo-era-accent">Semana 12</span>
+                                        <h4>Operación y soporte</h4>
+                                        <p>Cambio, conocimiento, eventos, incidencias, problemas y service desk.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section> <!-- /UNIDAD III --></main>
+
+    <!-- ══════════════════════ FOOTER ══════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <div class="brand">
+                        <div class="brand-icon">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <rect x="1" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="13" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="1" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M13 17H21M17 13V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="brand-name">TI Empresarial</span>
+                    </div>
+                    <p class="footer-tagline">Contenido educativo sobre conceptos, modelos y buenas prácticas comunes en TI empresarial. Contenido académico de consulta.</p>
+                </div>
+                <div class="footer-nav-col">
+                    <span class="footer-nav-title">Unidades</span>
+                    <nav class="footer-nav">
+                        <a href="unidad1.html">Unidad I · Administración en la Nube</a>
+                        <a href="unidad2.html">Unidad II · Aplicaciones empresariales</a>
+                        <a href="unidad3.html">Unidad III · Gobierno y servicios TI</a>
+                        <a href="unidad4.html">Unidad IV · Desarrollo e implementación</a>
+                    </nav>
+                </div>
+                <div class="footer-ref-col">
+                    <span class="footer-nav-title">Referencias</span>
+                    <div class="footer-refs">
+                        <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="ref-pill">NIST <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://owasp.org/" target="_blank" rel="noopener" class="ref-pill">OWASP <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" rel="noopener" class="ref-pill">ISO 27001 <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="ref-pill">CNCF <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Material informativo académico</span>
+                <span class="footer-mono">Autor: Rogger Josue Palma Baldeón</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
