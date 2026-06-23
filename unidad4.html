@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal especializado en gestión de la información, ecosistemas Cloud e infraestructura tecnológica empresarial.">
+    <title>Unidad IV | Desarrollo e implementación de sistemas</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <a class="skip-link" href="index.html#contenido">Saltar al contenido</a>
+
+    <!-- ══════════════════════ HEADER ══════════════════════ -->
+    <header class="site-header">
+
+        <!-- TOP STRIP -->
+        <div class="topstrip">
+            <div class="topstrip-inner">
+                <div class="topstrip-left">
+                    <span class="mono-chip"><i class="bi bi-circle-fill pulse-dot"></i> Sistema activo</span>
+                    <span class="sep">·</span>
+                    <span class="mono-text">Arquitectura Cloud · Infraestructura TI · Sistemas de Información</span>
+                </div>
+                <div class="topstrip-right">
+                    <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="strip-link">NIST <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://owasp.org/" target="_blank" rel="noopener" class="strip-link">OWASP <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="strip-link">CNCF <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN NAVBAR -->
+        <nav class="navbar" id="navbar" aria-label="Navegación principal">
+            <div class="nav-inner">
+                <!-- Brand -->
+                <a class="brand" href="index.html#contenido" aria-label="Inicio">
+                    <div class="brand-icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="13" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="1" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M13 17H21M17 13V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">TI Empresarial</span>
+                        <span class="brand-sub">Fundamentos técnicos</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <ul class="nav-links" role="list">
+    <li><a href="index.html" class="nav-link"><span class="link-num">00</span><span>Inicio</span></a></li>
+    <li><a href="unidad1.html" class="nav-link"><span class="link-num">I</span><span>Unidad I</span></a></li>
+    <li><a href="unidad2.html" class="nav-link"><span class="link-num">II</span><span>Unidad II</span></a></li>
+    <li><a href="unidad3.html" class="nav-link"><span class="link-num">III</span><span>Unidad III</span></a></li>
+    <li><a href="unidad4.html" class="nav-link"><span class="link-num">IV</span><span>Unidad IV</span></a></li>
+</ul>
+
+                <!-- Right actions -->
+                <div class="nav-actions">
+                    <a href="unidad4.html#semana-15" class="nav-cta">
+                        <i class="bi bi-check2-square"></i>
+                        <span>Checklist</span>
+                    </a>
+                    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Nav Progress Line -->
+            <div class="nav-progress" id="navProgress"></div>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <div class="mobile-menu-inner">
+    <nav>
+        <a href="index.html" class="mob-link"><span class="mob-num">00</span><span class="mob-label">Inicio</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad1.html" class="mob-link"><span class="mob-num">I</span><span class="mob-label">Unidad I</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad2.html" class="mob-link"><span class="mob-num">II</span><span class="mob-label">Unidad II</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad3.html" class="mob-link"><span class="mob-num">I</span><span class="mob-label">Unidad III</span><i class="bi bi-arrow-right"></i></a>
+        <a href="unidad4.html" class="mob-link"><span class="mob-num">II</span><span class="mob-label">Unidad IV</span><i class="bi bi-arrow-right"></i></a>
+    </nav>
+                <div class="mob-footer">
+                    <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="mob-ref">NIST</a>
+                    <a href="https://owasp.org/" target="_blank" rel="noopener" class="mob-ref">OWASP</a>
+                    <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="mob-ref">CNCF</a>
+                    <a href="https://www.iso.org/" target="_blank" rel="noopener" class="mob-ref">ISO 27001</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════ HERO ══════ -->
+        <section class="hero" aria-label="Portada">
+            <div class="hero-bg">
+                <div class="hero-orb orb-1"></div>
+                <div class="hero-orb orb-2"></div>
+                <div class="hero-orb orb-3"></div>
+                <div class="hero-grid"></div>
+            </div>
+
+            <div class="hero-inner">
+                <!-- Left column -->
+                <div class="hero-content" data-aos="fade-up" data-aos-duration="700">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-badge"><i class="bi bi-lightning-charge-fill"></i> Arquitectura moderna</span>
+                        <span class="eyebrow-badge"><i class="bi bi-shield-check-fill"></i> Seguridad aplicada</span>
+                        <span class="eyebrow-badge d-none d-md-inline-flex"><i class="bi bi-activity"></i> FinOps</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="title-line">Sistemas,</span>
+                        <span class="title-line accent">Cloud</span>
+                        <span class="title-line">e Infraestructura</span>
+                    </h1>
+
+                    <p class="hero-desc">Un recorrido técnico por conceptos esenciales, modelos de despliegue, administración y buenas prácticas para entornos empresariales modernos.</p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-n">4</span>
+                            <span class="stat-l">Módulos</span>
+                        </div>
+                        <div class="stat-div"></div>
+                        <div class="stat-item">
+                            <span class="stat-n">IaaS</span>
+                            <span class="stat-l">PaaS · SaaS</span>
+                        </div>
+                        <div class="stat-div"></div>
+                        <div class="stat-item">
+                            <span class="stat-n">Zero</span>
+                            <span class="stat-l">Trust Ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Module Map -->
+                <div class="hero-map" data-aos="fade-left" data-aos-duration="700" data-aos-delay="120">
+                    <div class="map-card">
+                        <div class="map-header">
+                            <div class="map-header-left">
+                                <i class="bi bi-terminal-fill"></i>
+                                <span>Mapa de contenido</span>
+                            </div>
+                            <span class="map-badge">Unidad IV</span>
+                        </div>
+
+                        <div class="map-modules">
+                            <a href="unidad1.html" class="map-module">
+                                <div class="mod-icon mod-blue"><i class="bi bi-database-fill"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad I</span>
+                                    <span class="mod-tags">Semanas 01–04 · Cloud &amp; Infra</span>
+                                </div>
+                                <span class="mod-num">I</span>
+                            </a>
+                            <a href="unidad2.html" class="map-module">
+                                <div class="mod-icon mod-cyan"><i class="bi bi-cloud-fill"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad II</span>
+                                    <span class="mod-tags">Semanas 05–08 · BI &amp; Apps</span>
+                                </div>
+                                <span class="mod-num">II</span>
+                            </a>
+                            <a href="unidad3.html" class="map-module">
+                                <div class="mod-icon mod-violet"><i class="bi bi-shield-check"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad III</span>
+                                    <span class="mod-tags">Semanas 09–12 · ITIL &amp; COBIT</span>
+                                </div>
+                                <span class="mod-num">III</span>
+                            </a>
+                            <a href="unidad4.html" class="map-module">
+                                <div class="mod-icon mod-green"><i class="bi bi-code-slash"></i></div>
+                                <div class="mod-info">
+                                    <span class="mod-title">Unidad IV</span>
+                                    <span class="mod-tags">Semanas 13–16 · SDLC</span>
+                                </div>
+                                <span class="mod-num">IV</span>
+                            </a>
+                        </div>
+
+                        <div class="map-footer">
+                            <i class="bi bi-mouse2"></i> Scroll para explorar o usa el menú
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll hint -->
+            <div class="scroll-hint" aria-hidden="true">
+                <span>scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+    </header>
+
+    <!-- ══════════════════════ MAIN ══════════════════════ -->
+    <main id="contenido"><section id="unidad-iv" class="unit">
+            <div class="unit-header" data-aos="fade-up">
+                <div class="unit-label">
+                    <span class="unit-num">UNIDAD IV</span>
+                    <span class="unit-pill">Desarrollo e implementación de sistemas</span>
+                </div>
+                <p class="unit-desc">Esta unidad cubre el ciclo de vida completo de los sistemas de información: desde el análisis y diseño hasta la implementación, el mantenimiento y la evaluación final del curso.</p>
+                <div class="unit-weeks">
+                    <a class="week-chip" href="#semana-13"><span>Semana 13</span><small>Ciclo de vida SDLC</small></a>
+                    <a class="week-chip" href="#semana-14"><span>Semana 14</span><small>Implementación SI</small></a>
+                    <a class="week-chip" href="#semana-15"><span>Semana 15</span><small>Proyecto integrador</small></a>
+                    <a class="week-chip" href="#semana-16"><span>Semana 16</span><small>Evaluación final</small></a>
+                </div>
+            </div>
+
+            <article id="semana-13" class="module">
+                <div class="module-inner">
+                    <div class="module-header" data-aos="fade-up">
+                        <div class="module-label">
+                            <span class="label-num">Semana 13</span>
+                            <span class="label-line"></span>
+                            <span class="label-cat">Ciclo de vida</span>
+                        </div>
+                        <h2 class="module-title">Ciclo de Vida del Desarrollo de Sistemas (SDLC)</h2>
+                        <p class="module-intro">Metodologías estructuradas para analizar, diseñar, construir, probar, implementar y mantener sistemas de información alineados a necesidades del negocio.</p>
+                    </div>
+
+                    <div class="callout callout-blue" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-arrow-repeat"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">Fases del SDLC</h3>
+                            <div class="callout-grid">
+                                <div class="callout-item">
+                                    <strong>Análisis</strong>
+                                    <span>Levantamiento de requerimientos funcionales y no funcionales. Entrevistas, workshops, AS-IS/TO-BE y documento de especificación (SRS).</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Diseño</strong>
+                                    <span>Arquitectura lógica y física, modelos de datos (ER), interfaces (UI/UX), APIs y plan de pruebas.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Desarrollo · Pruebas · Implementación · Mantenimiento</strong>
+                                    <span>Codificación, QA (unit/integration/UAT), despliegue y evolución continua con soporte y mejoras.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Metodologías de desarrollo</h3>
+                        <div class="type-grid">
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-blue"><i class="bi bi-water"></i></div>
+                                    <span class="tc-tag">Predictivo</span>
+                                </div>
+                                <h4>Cascada (Waterfall)</h4>
+                                <p class="tc-desc">Fases secuenciales con entregables formales. Ideal para proyectos con requerimientos estables y regulados (aeroespacial, salud).</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-violet"><i class="bi bi-hurricane"></i></div>
+                                    <span class="tc-tag">Iterativo</span>
+                                </div>
+                                <h4>Espiral (Spiral)</h4>
+                                <p class="tc-desc">Combina iteración con gestión de riesgos. Cada ciclo incluye planificación, análisis de riesgo, desarrollo y evaluación.</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-cyan"><i class="bi bi-people-fill"></i></div>
+                                    <span class="tc-tag">Ágil</span>
+                                </div>
+                                <h4>Scrum</h4>
+                                <p class="tc-desc">Sprints de 2–4 semanas, roles (PO, SM, Dev Team), backlog y entregas incrementales. Ceremonias: planning, daily, review, retrospective.</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-gold"><i class="bi bi-kanban-fill"></i></div>
+                                    <span class="tc-tag">Flujo continuo</span>
+                                </div>
+                                <h4>Kanban</h4>
+                                <p class="tc-desc">Visualización de flujo de trabajo con límites WIP. Optimiza throughput sin sprints fijos. Ideal para soporte y mantenimiento evolutivo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>DevOps: integración desarrollo-operaciones</h3>
+                        <div class="function-list">
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-git"></i></div>
+                                <div class="fn-body">
+                                    <h4>CI/CD Pipeline</h4>
+                                    <p>Integración continua (build + test automático en cada commit) y despliegue continuo (CD) a entornos staging/producción con aprobaciones automatizadas o manuales.</p>
+                                </div>
+                            </div>
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-infinity"></i></div>
+                                <div class="fn-body">
+                                    <h4>Cultura y herramientas</h4>
+                                    <p>Rompe silos Dev/Ops. Herramientas: GitHub Actions, GitLab CI, Jenkins, Terraform, Docker, Kubernetes. Métricas DORA: deployment frequency, lead time, MTTR, change failure rate.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Comparativa de metodologías</h3>
+                        <div class="deploy-grid">
+                            <div class="deploy-card">
+                                <div class="dc-stripe stripe-blue"></div>
+                                <div class="dc-body">
+                                    <i class="bi bi-water dc-icon"></i>
+                                    <h4>Cascada vs Ágil</h4>
+                                    <p><strong>Cascada</strong>: planificación upfront, cambios costosos. <strong>Ágil</strong>: adaptación continua, entregas frecuentes. Híbrido común en enterprise (Water-Scrum-Fall).</p>
+                                </div>
+                            </div>
+                            <div class="deploy-card">
+                                <div class="dc-stripe stripe-cyan"></div>
+                                <div class="dc-body">
+                                    <i class="bi bi-kanban dc-icon"></i>
+                                    <h4>Scrum vs Kanban</h4>
+                                    <p><strong>Scrum</strong>: sprints con roles y ceremonias. <strong>Kanban</strong>: flujo continuo sin roles obligatorios. Ambos son ágiles pero con diferente cadencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-block" data-aos="fade-up">
+                        <div class="video-label"><i class="bi bi-play-circle-fill"></i> Recurso visual</div>
+                        <div class="video-wrap">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7Wsm07RmDpk?si=2XCjONbH1wITuQHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                         </div>
+                        <p class="video-caption">Ciclo de vida del desarrollo de software: fases, metodologías y buenas prácticas.</p>
+                    </div>
+                </div>
+            </article>
+
+        <div class="module-divider" aria-hidden="true"><span>Semana 14</span></div>
+
+            <article id="semana-14" class="module">
+                <div class="module-inner">
+                    <div class="module-header" data-aos="fade-up">
+                        <div class="module-label">
+                            <span class="label-num">Semana 14</span>
+                            <span class="label-line"></span>
+                            <span class="label-cat">Implementación</span>
+                        </div>
+                        <h2 class="module-title">Implementación de Sistemas de Información</h2>
+                        <p class="module-intro">Estrategias para poner en producción un nuevo sistema minimizando riesgos operativos, resistencia al cambio y disrupción del negocio.</p>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Estrategias de implementación</h3>
+                        <div class="infra-grid">
+                            <div class="infra-card">
+                                <div class="ic-top">
+                                    <i class="bi bi-lightning-charge-fill ic-icon"></i>
+                                    <div class="ic-badge">Directa (Big Bang)</div>
+                                </div>
+                                <p>El sistema anterior se apaga y el nuevo entra en operación de un día para otro. Rápido pero riesgoso. Requiere preparación exhaustiva, rollback plan y ventana de mantenimiento.</p>
+                                <div class="ic-pros-cons">
+                                    <span class="ic-pro"><i class="bi bi-plus-circle-fill"></i> Rápido</span>
+                                    <span class="ic-con"><i class="bi bi-dash-circle-fill"></i> Alto riesgo</span>
+                                </div>
+                            </div>
+                            <div class="infra-card ic-featured">
+                                <div class="ic-top">
+                                    <i class="bi bi-columns-gap ic-icon"></i>
+                                    <div class="ic-badge ic-badge-accent">Paralela</div>
+                                </div>
+                                <p>Ambos sistemas operan simultáneamente durante un periodo de transición. Se comparan resultados para validar integridad antes del corte definitivo. Mayor costo, menor riesgo.</p>
+                                <div class="ic-pros-cons">
+                                    <span class="ic-pro"><i class="bi bi-plus-circle-fill"></i> Seguro</span>
+                                    <span class="ic-con"><i class="bi bi-dash-circle-fill"></i> Costoso</span>
+                                </div>
+                            </div>
+                            <div class="infra-card">
+                                <div class="ic-top">
+                                    <i class="bi bi-bezier2 ic-icon"></i>
+                                    <div class="ic-badge">Piloto</div>
+                                </div>
+                                <p>Implementación en un departamento, sucursal o región antes del despliegue global. Permite aprender, ajustar y capacitar con riesgo acotado.</p>
+                                <div class="ic-pros-cons">
+                                    <span class="ic-pro"><i class="bi bi-plus-circle-fill"></i> Aprendizaje</span>
+                                    <span class="ic-pro"><i class="bi bi-plus-circle-fill"></i> Riesgo bajo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-prose" data-aos="fade-up">
+                        <h3>Implementación por fases (Phased)</h3>
+                        <p>El sistema se despliega módulo a módulo o región a región de forma secuencial. Combina ventajas del piloto con cobertura progresiva. Común en implementaciones ERP donde se activan módulos financieros primero, luego logística, RR.HH., etc.</p>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Casos de implementación: SAP, Oracle y Microsoft Dynamics</h3>
+                        <div class="function-list">
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-boxes"></i></div>
+                                <div class="fn-body">
+                                    <h4>SAP S/4HANA — Implementación global</h4>
+                                    <p>Empresas como Adidas y Reckitt implementaron S/4HANA con enfoque <strong>Greenfield</strong> (nueva instalación) o <strong>Brownfield</strong> (migración desde ECC). Metodología SAP Activate: Discover, Prepare, Explore, Realize, Deploy, Run. Duración típica: 12–36 meses.</p>
+                                </div>
+                            </div>
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-database-fill"></i></div>
+                                <div class="fn-body">
+                                    <h4>Oracle Fusion Cloud ERP</h4>
+                                    <p>Oracle Cloud Infrastructure hospeda Fusion ERP como SaaS. Implementación con Oracle Unified Method (OUM). Casos en manufactura y servicios financieros con integración nativa de SCM, HCM y EPM.</p>
+                                </div>
+                            </div>
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-microsoft"></i></div>
+                                <div class="fn-body">
+                                    <h4>Microsoft Dynamics 365</h4>
+                                    <p>Implementación ágil para PYMEs y enterprise. Sure Step methodology. Integración nativa con Office 365, Power Platform y Azure. Partners certificados (Avanade, Hitachi Solutions) lideran despliegues globales.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callout callout-violet" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-people-fill"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">Gestión del cambio organizacional</h3>
+                            <div class="callout-grid">
+                                <div class="callout-item">
+                                    <strong>Patrocinio ejecutivo</strong>
+                                    <span>Liderazgo visible que comunica el "por qué" del cambio y remueve obstáculos organizacionales.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Capacitación</strong>
+                                    <span>Programas por rol (super-usuarios, operadores, administradores) con materiales, sandbox y certificación.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Comunicación</strong>
+                                    <span>Plan de comunicación interna: hitos, beneficios, FAQ y canales de feedback durante la transición.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        <div class="module-divider" aria-hidden="true"><span>Semana 15</span></div>
+
+            <article id="semana-15" class="module">
+                <div class="module-inner">
+                    <div class="module-header" data-aos="fade-up">
+                        <div class="module-label">
+                            <span class="label-num">Semana 15</span>
+                            <span class="label-line"></span>
+                            <span class="label-cat">Proyecto integrador</span>
+                        </div>
+                        <h2 class="module-title">Proyecto Integrador: Implementación de ERP en Empresa Distribuidora</h2>
+                        <p class="module-intro">Caso completo de transformación digital: diagnóstico, diseño de solución, cronograma, costos, KPIs y beneficios esperados para una distribuidora regional de productos de consumo.</p>
+                    </div>
+
+                    <div class="callout callout-blue" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-building"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">Introducción · Distribuidora Andina S.A.</h3>
+                            <div class="callout-grid">
+                                <div class="callout-item">
+                                    <strong>Contexto</strong>
+                                    <span>Empresa distribuidora con 12 centros de distribución, 850 empleados, 3,200 clientes activos y facturación anual de USD 45M. Opera con ERP legacy on-premise de 15 años.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Alcance</strong>
+                                    <span>Implementación de SAP S/4HANA Cloud (módulos FI, CO, MM, SD, WM) con integración CRM Salesforce y BI con Power BI.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Duración</strong>
+                                    <span>Proyecto de 18 meses con go-live por fases: financiero (mes 10), logística (mes 14), comercial completo (mes 18).</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-prose" data-aos="fade-up">
+                        <h3>Diagnóstico y problemática</h3>
+                        <p><strong>Diagnóstico:</strong> Auditoría reveló 47 sistemas desconectados, inventario con 12% de discrepancia vs. físico, cierre contable de 15 días hábiles, 23% de pedidos con error de facturación y cero visibilidad de margen por cliente/producto en tiempo real.</p>
+                        <p><strong>Problemática:</strong> Silos de información entre ventas, almacén y finanzas. Procesos manuales en Excel para reportes gerenciales. Imposibilidad de escalar operaciones a nuevas regiones sin duplicar infraestructura. Riesgo de incumplimiento fiscal por errores en facturación electrónica.</p>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Objetivos del proyecto</h3>
+                        <div class="pillar-list">
+                            <div class="pillar-item">
+                                <span class="pillar-n">01</span>
+                                <div class="pillar-body">
+                                    <strong>Integración operativa</strong>
+                                    <p>Unificar finanzas, inventario, ventas y logística en una plataforma con fuente única de verdad y trazabilidad end-to-end.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">02</span>
+                                <div class="pillar-body">
+                                    <strong>Eficiencia</strong>
+                                    <p>Reducir cierre contable de 15 a 3 días hábiles y discrepancia de inventario de 12% a menos del 2%.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">03</span>
+                                <div class="pillar-body">
+                                    <strong>Inteligencia de negocio</strong>
+                                    <p>Dashboards ejecutivos con margen por cliente, rotación de inventario, DSO y forecast de demanda en tiempo real.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">04</span>
+                                <div class="pillar-body">
+                                    <strong>Escalabilidad</strong>
+                                    <p>Arquitectura cloud que soporte crecimiento a 20 centros de distribución sin inversión en infraestructura on-premise.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Arquitectura de la solución</h3>
+                        <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:2rem;overflow-x:auto;">
+                            <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;display:block;margin:0 auto;" aria-label="Arquitectura ERP distribuidora">
+                                <rect x="280" y="10" width="200" height="50" rx="6" fill="none" stroke="#6366f1" stroke-width="2"/>
+                                <text x="380" y="40" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">SAP S/4HANA Cloud</text>
+                                <line x1="380" y1="60" x2="380" y2="80" stroke="#475569" stroke-width="2"/>
+                                <rect x="80" y="80" width="140" height="40" rx="4" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+                                <text x="150" y="105" text-anchor="middle" fill="#94a3b8" font-size="11">FI / CO</text>
+                                <rect x="240" y="80" width="140" height="40" rx="4" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+                                <text x="310" y="105" text-anchor="middle" fill="#94a3b8" font-size="11">MM / WM</text>
+                                <rect x="400" y="80" width="140" height="40" rx="4" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+                                <text x="470" y="105" text-anchor="middle" fill="#94a3b8" font-size="11">SD</text>
+                                <rect x="560" y="80" width="140" height="40" rx="4" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+                                <text x="630" y="105" text-anchor="middle" fill="#94a3b8" font-size="11">Analytics</text>
+                                <line x1="380" y1="120" x2="380" y2="150" stroke="#475569" stroke-width="2"/>
+                                <rect x="130" y="150" width="160" height="45" rx="6" fill="none" stroke="#22c55e" stroke-width="2"/>
+                                <text x="210" y="178" text-anchor="middle" fill="#e2e8f0" font-size="12">Salesforce CRM</text>
+                                <rect x="470" y="150" width="160" height="45" rx="6" fill="none" stroke="#22c55e" stroke-width="2"/>
+                                <text x="550" y="178" text-anchor="middle" fill="#e2e8f0" font-size="12">Power BI</text>
+                                <line x1="380" y1="195" x2="380" y2="220" stroke="#475569" stroke-width="2"/>
+                                <rect x="230" y="220" width="300" height="45" rx="6" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+                                <text x="380" y="248" text-anchor="middle" fill="#94a3b8" font-size="12">Azure Integration · API Gateway · EDI Proveedores</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Cronograma y costos estimados</h3>
+                        <div class="type-grid">
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-blue"><i class="bi bi-calendar3"></i></div>
+                                    <span class="tc-tag">Fase 1 · Meses 1–4</span>
+                                </div>
+                                <h4>Discover &amp; Prepare</h4>
+                                <p class="tc-desc">Fit-gap, blueprint, equipo proyecto, limpieza de datos maestros. Costo: USD 180K (consultoría + licencias sandbox).</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-cyan"><i class="bi bi-calendar3"></i></div>
+                                    <span class="tc-tag">Fase 2 · Meses 5–10</span>
+                                </div>
+                                <h4>Realize · Finanzas</h4>
+                                <p class="tc-desc">Configuración FI/CO, migración de datos, pruebas UAT, go-live financiero. Costo: USD 420K.</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-violet"><i class="bi bi-calendar3"></i></div>
+                                    <span class="tc-tag">Fase 3 · Meses 11–14</span>
+                                </div>
+                                <h4>Logística &amp; WM</h4>
+                                <p class="tc-desc">MM/WM, integración WMS, RFID en almacenes. Costo: USD 310K.</p>
+                            </div>
+                            <div class="type-card">
+                                <div class="tc-header">
+                                    <div class="tc-icon bg-gold"><i class="bi bi-calendar3"></i></div>
+                                    <span class="tc-tag">Fase 4 · Meses 15–18</span>
+                                </div>
+                                <h4>Comercial &amp; BI</h4>
+                                <p class="tc-desc">SD, CRM, Power BI, hypercare. Costo: USD 290K. <strong>Total proyecto: USD 1.2M</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callout callout-dark" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">KPIs objetivo y beneficios</h3>
+                            <div class="callout-grid">
+                                <div class="callout-item">
+                                    <strong>KPIs</strong>
+                                    <span>Cierre contable: 15 → 3 días. Inventario: 12% → &lt;2% error. OTIF: 78% → 95%. DSO: 52 → 38 días. Margen bruto visible por SKU.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Beneficios tangibles</strong>
+                                    <span>ROI proyectado 28% en 3 años. Ahorro USD 890K/año en errores, stock obsoleto y horas-hombre en reportes manuales.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Beneficios intangibles</strong>
+                                    <span>Agilidad comercial, cumplimiento fiscal, satisfacción del cliente y base para expansión regional.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Dashboard ejecutivo (mockup conceptual)</h3>
+                        <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+                            <div class="type-grid" style="margin:0;">
+                                <div class="type-card" style="text-align:center;">
+                                    <h4 style="font-size:2rem;color:var(--accent-cyan);margin:0;">95%</h4>
+                                    <p class="tc-desc">OTIF (On Time In Full)</p>
+                                </div>
+                                <div class="type-card" style="text-align:center;">
+                                    <h4 style="font-size:2rem;color:var(--accent-green);margin:0;">3 días</h4>
+                                    <p class="tc-desc">Cierre contable</p>
+                                </div>
+                                <div class="type-card" style="text-align:center;">
+                                    <h4 style="font-size:2rem;color:var(--accent-violet);margin:0;">1.8%</h4>
+                                    <p class="tc-desc">Error inventario</p>
+                                </div>
+                                <div class="type-card" style="text-align:center;">
+                                    <h4 style="font-size:2rem;color:var(--accent-gold);margin:0;">USD 3.8M</h4>
+                                    <p class="tc-desc">Margen bruto mensual</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-prose" data-aos="fade-up">
+                        <h3>Conclusiones</h3>
+                        <p>La implementación de ERP en Distribuidora Andina demuestra que el éxito depende de tres factores: <strong>patrocinio ejecutivo sostenido</strong>, <strong>calidad de datos maestros</strong> y <strong>gestión del cambio</strong>. La estrategia por fases mitigó riesgos operativos y permitió aprendizaje incremental. La integración con CRM y BI convierte el ERP de sistema transaccional a plataforma de inteligencia de negocio.</p>
+                    </div>
+                </div>
+            </article>
+
+        <div class="module-divider" aria-hidden="true"><span>Semana 16</span></div>
+
+            <article id="semana-16" class="module">
+                <div class="module-inner">
+                    <div class="module-header" data-aos="fade-up">
+                        <div class="module-label">
+                            <span class="label-num">Semana 16</span>
+                            <span class="label-line"></span>
+                            <span class="label-cat">Evaluación final</span>
+                        </div>
+                        <h2 class="module-title">Evaluación Final del Curso</h2>
+                        <p class="module-intro">Síntesis integral de los 16 módulos: mapa conceptual, línea de tiempo, autoevaluación y recursos para profundizar en Sistemas de Información Gerencial.</p>
+                    </div>
+
+                    <div class="callout callout-cyan" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-journal-bookmark-fill"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">Resumen general del curso</h3>
+                            <div class="callout-grid">
+                                <div class="callout-item">
+                                    <strong>Unidad I (01–04)</strong>
+                                    <span>Fundamentos de SI, cloud computing, administración cloud e infraestructura TI.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Unidad II (05–08)</strong>
+                                    <span>SI en negocios, BI, modelo EPS, EAS (ERP/CRM/SCM) y nube híbrida.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>Unidad III (09–12) · IV (13–16)</strong>
+                                    <span>Gobierno TI, ITIL, SDLC, implementación de sistemas y proyecto integrador ERP.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Mapa conceptual integrado</h3>
+                        <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:2rem;overflow-x:auto;">
+                            <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:800px;display:block;margin:0 auto;" aria-label="Mapa conceptual SIG">
+                                <ellipse cx="400" cy="40" rx="120" ry="30" fill="none" stroke="#6366f1" stroke-width="2"/>
+                                <text x="400" y="45" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">SISTEMAS DE INFORMACIÓN GERENCIAL</text>
+                                <line x1="280" y1="55" x2="120" y2="100" stroke="#475569" stroke-width="1.5"/>
+                                <line x1="360" y1="65" x2="280" y2="100" stroke="#475569" stroke-width="1.5"/>
+                                <line x1="440" y1="65" x2="520" y2="100" stroke="#475569" stroke-width="1.5"/>
+                                <line x1="520" y1="55" x2="680" y2="100" stroke="#475569" stroke-width="1.5"/>
+                                <rect x="40" y="100" width="160" height="50" rx="6" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+                                <text x="120" y="130" text-anchor="middle" fill="#94a3b8" font-size="11">Cloud &amp; Infra</text>
+                                <rect x="220" y="100" width="160" height="50" rx="6" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+                                <text x="300" y="130" text-anchor="middle" fill="#94a3b8" font-size="11">Apps Empresariales</text>
+                                <rect x="420" y="100" width="160" height="50" rx="6" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+                                <text x="500" y="130" text-anchor="middle" fill="#94a3b8" font-size="11">Gobierno &amp; ITIL</text>
+                                <rect x="600" y="100" width="160" height="50" rx="6" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+                                <text x="680" y="130" text-anchor="middle" fill="#94a3b8" font-size="11">SDLC &amp; Proyectos</text>
+                                <line x1="120" y1="150" x2="120" y2="190" stroke="#475569" stroke-width="1"/>
+                                <line x1="300" y1="150" x2="300" y2="190" stroke="#475569" stroke-width="1"/>
+                                <line x1="500" y1="150" x2="500" y2="190" stroke="#475569" stroke-width="1"/>
+                                <line x1="680" y1="150" x2="680" y2="190" stroke="#475569" stroke-width="1"/>
+                                <text x="120" y="210" text-anchor="middle" fill="#64748b" font-size="10">IaaS · PaaS · SaaS</text>
+                                <text x="120" y="225" text-anchor="middle" fill="#64748b" font-size="10">Zero Trust · FinOps</text>
+                                <text x="300" y="210" text-anchor="middle" fill="#64748b" font-size="10">ERP · CRM · BI</text>
+                                <text x="300" y="225" text-anchor="middle" fill="#64748b" font-size="10">EPS · Nube Híbrida</text>
+                                <text x="500" y="210" text-anchor="middle" fill="#64748b" font-size="10">COBIT · SLA</text>
+                                <text x="500" y="225" text-anchor="middle" fill="#64748b" font-size="10">Service Desk</text>
+                                <text x="680" y="210" text-anchor="middle" fill="#64748b" font-size="10">Agile · DevOps</text>
+                                <text x="680" y="225" text-anchor="middle" fill="#64748b" font-size="10">Implementación ERP</text>
+                                <rect x="250" y="280" width="300" height="50" rx="8" fill="none" stroke="#22c55e" stroke-width="2"/>
+                                <text x="400" y="310" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="600">VALOR PARA EL NEGOCIO</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Línea de tiempo del curso</h3>
+                        <div class="evolution-track">
+                            <div class="evo-step">
+                                <div class="evo-dot"></div>
+                                <div class="evo-card">
+                                    <span class="evo-era">Semanas 01–04</span>
+                                    <h4>Unidad I · Fundamentos</h4>
+                                    <p>SI empresarial, cloud, administración e infraestructura TI.</p>
+                                </div>
+                            </div>
+                            <div class="evo-step">
+                                <div class="evo-dot"></div>
+                                <div class="evo-card">
+                                    <span class="evo-era">Semanas 05–08</span>
+                                    <h4>Unidad II · Aplicaciones</h4>
+                                    <p>BI, arquitectura EPS, EAS y gestión en nube híbrida.</p>
+                                </div>
+                            </div>
+                            <div class="evo-step">
+                                <div class="evo-dot"></div>
+                                <div class="evo-card">
+                                    <span class="evo-era">Semanas 09–12</span>
+                                    <h4>Unidad III · Gobierno</h4>
+                                    <p>Gobierno TI, ITIL, diseño/transición y operación de servicios.</p>
+                                </div>
+                            </div>
+                            <div class="evo-step evo-current">
+                                <div class="evo-dot"></div>
+                                <div class="evo-card">
+                                    <span class="evo-era evo-era-accent">Semanas 13–16</span>
+                                    <h4>Unidad IV · Desarrollo</h4>
+                                    <p>SDLC, implementación, proyecto integrador y evaluación final.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Banco de preguntas</h3>
+                        <div class="pillar-list">
+                            <div class="pillar-item">
+                                <span class="pillar-n">Q1</span>
+                                <div class="pillar-body">
+                                    <strong>¿Cuál es la diferencia entre gobierno de TI y gestión de TI?</strong>
+                                    <p>El gobierno define qué decisiones toma la alta dirección (inversiones, riesgos, arquitectura). La gestión ejecuta esas decisiones en operaciones diarias (service desk, proyectos, soporte).</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">Q2</span>
+                                <div class="pillar-body">
+                                    <strong>¿Qué es el modelo EPS y cuáles son sus tres planos?</strong>
+                                    <p>Estratégico (objetivos de negocio), Procesos (flujos y roles) y Sistemas (aplicaciones, datos e infraestructura). La coherencia entre planos determina la efectividad del SIG.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">Q3</span>
+                                <div class="pillar-body">
+                                    <strong>Compare ERP vs CRM y explique su complementariedad.</strong>
+                                    <p>ERP gestiona recursos internos; CRM gestiona relaciones con clientes. Se integran: CRM genera oportunidades y pedidos; ERP los factura, despacha y contabiliza.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">Q4</span>
+                                <div class="pillar-body">
+                                    <strong>¿Cuáles son las estrategias de implementación de un SI?</strong>
+                                    <p>Directa (big bang), paralela, piloto y por fases. La elección depende de tolerancia al riesgo, complejidad, presupuesto y criticidad del negocio.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <span class="pillar-n">Q5</span>
+                                <div class="pillar-body">
+                                    <strong>¿Qué diferencia una incidencia de un problema en ITIL?</strong>
+                                    <p>Incidencia: interrupción o degradación del servicio (restaurar rápido). Problema: causa raíz de incidencias recurrentes (eliminar la causa permanente).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callout callout-violet" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-check2-square"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">Autoevaluación</h3>
+                            <div class="checklist-grid">
+                                <div class="cl-item">
+                                    <div class="cl-icon"><i class="bi bi-1-circle-fill"></i></div>
+                                    <div>
+                                        <strong>Puedo explicar los tipos de SI (TPS, MIS, DSS, ESS)</strong>
+                                        <p>Identifico qué sistema corresponde a cada nivel organizacional y decisión.</p>
+                                    </div>
+                                </div>
+                                <div class="cl-item">
+                                    <div class="cl-icon"><i class="bi bi-2-circle-fill"></i></div>
+                                    <div>
+                                        <strong>Comprendo modelos cloud (IaaS, PaaS, SaaS) y despliegue híbrido</strong>
+                                        <p>Diferencio responsabilidades, beneficios y herramientas de gestión multicloud.</p>
+                                    </div>
+                                </div>
+                                <div class="cl-item">
+                                    <div class="cl-icon"><i class="bi bi-3-circle-fill"></i></div>
+                                    <div>
+                                        <strong>Aplico frameworks de gobierno y servicios (COBIT, ITIL, ISO)</strong>
+                                        <p>Relaciono procesos ITIL con operación real y métricas SLA/OLA.</p>
+                                    </div>
+                                </div>
+                                <div class="cl-item">
+                                    <div class="cl-icon"><i class="bi bi-4-circle-fill"></i></div>
+                                    <div>
+                                        <strong>Diseño e implemento proyectos de SI con metodología</strong>
+                                        <p>Selecciono estrategia de implementación, estimo costos y defino KPIs de éxito.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-block" data-aos="fade-up">
+                        <h3>Recursos complementarios</h3>
+                        <div class="function-list">
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-link-45deg"></i></div>
+                                <div class="fn-body">
+                                    <h4>ISACA · COBIT 2019</h4>
+                                    <p><a href="https://www.isaca.org/resources/cobit" target="_blank" rel="noopener">isaca.org/resources/cobit</a> — Framework de gobierno y gestión de TI empresarial.</p>
+                                </div>
+                            </div>
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-link-45deg"></i></div>
+                                <div class="fn-body">
+                                    <h4>AXELOS · ITIL 4</h4>
+                                    <p><a href="https://www.axelos.com/certifications/itil-service-management" target="_blank" rel="noopener">axelos.com</a> — Mejores prácticas de gestión de servicios de TI.</p>
+                                </div>
+                            </div>
+                            <div class="fn-item">
+                                <div class="fn-icon"><i class="bi bi-link-45deg"></i></div>
+                                <div class="fn-body">
+                                    <h4>The Open Group · TOGAF</h4>
+                                    <p><a href="https://www.opengroup.org/togaf" target="_blank" rel="noopener">opengroup.org/togaf</a> — Arquitectura empresarial y metodología ADM.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="callout callout-green" data-aos="fade-up">
+                        <div class="callout-icon"><i class="bi bi-book-fill"></i></div>
+                        <div class="callout-body">
+                            <h3 class="callout-title">Bibliografía recomendada</h3>
+                            <div class="callout-grid">
+                                <div class="callout-item">
+                                    <strong>Laudon &amp; Laudon</strong>
+                                    <span><em>Management Information Systems: Managing the Digital Firm</em> (16th ed.). Pearson. Referencia académica principal en SI gerencial.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>O'Brien &amp; Marakas</strong>
+                                    <span><em>Management Information Systems</em>. McGraw-Hill. Fundamentos de SI, ERP y toma de decisiones.</span>
+                                </div>
+                                <div class="callout-item">
+                                    <strong>ISACA / AXELOS / ISO</strong>
+                                    <span>COBIT 2019 Framework, ITIL 4 Foundation, ISO/IEC 38500:2024. Documentación oficial de frameworks de gobierno y servicios.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section> <!-- /UNIDAD IV --></main>
+
+    <!-- ══════════════════════ FOOTER ══════════════════════ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <div class="brand">
+                        <div class="brand-icon">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                <rect x="1" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="13" y="1" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="1" y="13" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M13 17H21M17 13V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="brand-name">TI Empresarial</span>
+                    </div>
+                    <p class="footer-tagline">Contenido educativo sobre conceptos, modelos y buenas prácticas comunes en TI empresarial. Contenido académico de consulta.</p>
+                </div>
+                <div class="footer-nav-col">
+                    <span class="footer-nav-title">Unidades</span>
+                    <nav class="footer-nav">
+                        <a href="unidad1.html">Unidad I · Administración en la Nube</a>
+                        <a href="unidad2.html">Unidad II · Aplicaciones empresariales</a>
+                        <a href="unidad3.html">Unidad III · Gobierno y servicios TI</a>
+                        <a href="unidad4.html">Unidad IV · Desarrollo e implementación</a>
+                    </nav>
+                </div>
+                <div class="footer-ref-col">
+                    <span class="footer-nav-title">Referencias</span>
+                    <div class="footer-refs">
+                        <a href="https://www.nist.gov/" target="_blank" rel="noopener" class="ref-pill">NIST <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://owasp.org/" target="_blank" rel="noopener" class="ref-pill">OWASP <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://www.iso.org/isoiec-27001-information-security.html" target="_blank" rel="noopener" class="ref-pill">ISO 27001 <i class="bi bi-arrow-up-right"></i></a>
+                        <a href="https://www.cncf.io/" target="_blank" rel="noopener" class="ref-pill">CNCF <i class="bi bi-arrow-up-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Material informativo académico</span>
+                <span class="footer-mono">Autor: Rogger Josue Palma Baldeón</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
